@@ -28,7 +28,7 @@
                 <li><a href="#travel">Travelling Mode</a></li>
                 <li class="menuDeroulant"><a href="#travel-menu">Some travels</a>
                     <ul class="enumCountrys">
-                        <li><a href="./iceland.html">Iceland</a></li>
+                        <li><a href="./iceland.html" id="ice">Iceland</a></li>
                         <li><a href="./kirghistan.html">Kirghistan</a></li>
                         <li><a href="./india.html">India</a></li>
                         <li><a href="./turkey.html">Turkey</a></li>
@@ -40,17 +40,17 @@
                         <li><a href="#">Croatia</a></li>
                     </ul>
                 </li>
-                <li class="menuDeroulant">lang
+                <!-- <li class="menuDeroulant">lang
                     <ul class="enumCountrys langWrap">
-                        <li id="fr"><a href="#" language="french">FR</a></li>
-                        <li id="en"><a href="#" language="english" class="active">EN</a></li>
+                        <li><a href="#" language="french" id="fr">FR</a></li>
+                        <li><a href="#" language="english" id="en" class="active">EN</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li>
                     <a href="./contact.html">Contact</a>
                 </li>
             </ul>
-            <h1 class="logo">Mes pérégrinations</h1>
+            <h1 id="logo">Mes pérégrinations</h1>
         </div>
     </nav>
     <section class="showcase-area" id="showcase">
@@ -62,12 +62,15 @@
     <section id="about">
         <div class="about-wrapper container">
             <div class="about-text">
-                <h2>My some pérégrinations</h2>
-                <h2 class="small">About Us</h2>
+                <h2>Mes quelques pérégrinations</h2>
+                <h2 class="small">A propos</h2>
                 <p class="description">
-                    A small anthology of my wanderings.
-                    Creating a small site allowed me to keep a memory of these beautiful moments of sharing, to dust off
-                    all these memories.
+                <p>Dans le cadre de ma formation en développement Web, il me fallait de la matière pour tester,
+                    expérimenter et progresser dans toutes les techniques de structuration de mise en style et de
+                    programmation.</p>
+                <p>En créant un petit "album photos" celà me permet de
+                    dépoussiérer
+                    tous ces souvenirs et de continuer à approfondir mes bases.</p>
                 </p>
             </div>
             <div class="about-img">
@@ -77,38 +80,38 @@
     </section>
 
     <section id="travel">
-        <h2>Travelling mode</h2>
+        <h2 class="title">Travelling mode</h2>
         <div class="travel-container container">
-            <div class="travel-type fruite">
+            <div class="travel-type">
                 <div class="img-container">
                     <img src="./Assets/Locomotion/20200929_150421_resultat.webp" alt="boat" defer>
                     <div class="img-content">
-                        <h3>By boats</h3>
+                        <h3>Sur l'eau</h3>
 
                     </div>
                 </div>
             </div>
-            <div class="travel-type vegetable">
+            <div class="travel-type">
                 <div class="img-container">
                     <img src="./Assets/Locomotion/byFoot_resultat.webp" alt="railway" defer>
                     <div class="img-content">
-                        <h3>On foots</h3>
+                        <h3>A pieds</h3>
                     </div>
                 </div>
             </div>
-            <div class="travel-type grin">
+            <div class="travel-type">
                 <div class="img-container">
                     <img src="./Assets/Locomotion/IMG_20220110_175233028_resultat.webp" alt="error">
                     <div class="img-content">
-                        <h3>By car</h3>
+                        <h3>En voiture</h3>
                     </div>
                 </div>
             </div>
-            <div class="travel-type car">
+            <div class="travel-type">
                 <div class="img-container">
                     <img src="./Assets/Locomotion/IMG_train_resultat.webp" alt="error">
                     <div class="img-content">
-                        <h3>By train</h3>
+                        <h3>En train</h3>
                     </div>
                 </div>
             </div>
@@ -116,7 +119,7 @@
                 <div class="img-container">
                     <img src="./Assets/Locomotion/bus_resultat.webp" alt="error">
                     <div class="img-content">
-                        <h3>Bus and plane</h3>
+                        <h3>Bus && avion</h3>
                     </div>
                 </div>
             </div>
@@ -132,9 +135,9 @@
                 </div>
                 <div class="travel-description">
                     <h2 class="travel-title"><a href="./kirghistan.html">Kirghistan</a></h2>
-                    <p class="country">
-                        Kyrgyzstan or Kyrgyzstan, a country located at altitude, bordered by mountain ranges.
-                        It has in its center the second largest high altitude lake, Lake Issyk-Koul.
+                    <p class="decription">
+                        Kirghizistan ou Kirghizistan, pays situé en altitude, bordé de chaînes de montagnes.
+                        Il possède en son centre le deuxième plus grand lac d'altitude, le lac Issyk-Koul.
                     </p>
                 </div>
             </div>
@@ -144,8 +147,8 @@
                 </div>
                 <div class="travel-description">
                     <h2 class="travel-title"><a href="./india.html">India</a></h2>
-                    <p class="country">
-                        A country full of contrasts that cannot leave anyone indifferent.
+                    <p class="decription">
+                        Un pays plein de contrastes qui ne peut laisser personne indifférent.
                     </p>
                 </div>
             </div>
@@ -156,8 +159,8 @@
                 </div>
                 <div class="travel-description">
                     <h2 class="travel-title"><a href="./iceland.html">Iceland</a></h2>
-                    <p class="country">
-                        An immensity of water, fire, ice and magnificent landscapes
+                    <p class="description">
+                        Une immensité d'eau, de feu, de glace et de paysages magnifiques
                     </p>
 
                 </div>
@@ -170,8 +173,9 @@
                 <div class="travel-description">
                     <h2 class="travel-title"><a href="./sriLanka.html">Sri Lanka</a></h2>
                     <p class="country">
-                        Formerly Ceylon, today SriLanka. The island located a short distance south of India is also
-                        nicknamed “Pearl of the Indian Ocean”.
+                        Anciennement Ceylan, aujourd'hui Sri Lanka. L'île située à une courte distance au sud de l'Inde
+                        est également
+                        surnommée « Perle de l'Océan Indien ».
                     </p>
 
                 </div>
@@ -183,9 +187,9 @@
                 </div>
                 <div class="travel-description">
                     <h2 class="travel-title"><a href="./norway.html">Norway</a></h2>
-                    <p class="country">
-                        Visiting Norway means embarking on an adventure in the wide open spaces of the North where
-                        fjords, mountains and vast meadows coexist.
+                    <p class="description">
+                        Visiter la Norvège, c'est partir à l'aventure dans les grands espaces du Nord où
+                        fjords, montagnes et vastes prairies coexistent.
                     </p>
 
                 </div>
@@ -196,9 +200,9 @@
                 </div>
                 <div class=" travel-description">
                     <h2 class="travel-title"><a href="./turkey.html">Turkey</a></h2>
-                    <p class="country">
-                        Straddling two continents, the Bosphorus separates Turkey from the European continent to that of
-                        Asia.
+                    <p class="description">
+                        A cheval sur deux continents, le Bosphore sépare la Turquie du continent européen à celui de
+                        Asie.
                     </p>
                 </div>
             </div>
@@ -210,7 +214,8 @@
         <h2>Travels &copy; December 2022</h2>
     </footer>
 
-    <script src="./js/index.js"></script>
+
+    <script src="./js/changeLang.js"></script>
 </body>
 
 </html>
