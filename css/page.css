@@ -523,6 +523,14 @@ nav .navbar-container ul li:hover .enumCountrys {
         justify-content: space-between;
     }
 
+    .interlayerPictures {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .navbar-container .hamburger-lines .line {
         display: block;
         height: 4px;
