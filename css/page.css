@@ -26,6 +26,7 @@ h2,
 h3 {
     font-family: Winterland, sans serif;
     text-transform: capitalize;
+    text-align: center;
 }
 
 h4 .small {
