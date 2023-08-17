@@ -210,6 +210,7 @@ nav .navbar-container ul li:hover .enumCountrys {
 .about-wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 #about h2 {
@@ -219,7 +220,7 @@ nav .navbar-container ul li:hover .enumCountrys {
 }
 
 #about p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
 }
 
@@ -596,48 +597,11 @@ nav .navbar-container ul li:hover .enumCountrys {
 }
 
 /* Styles pour le conteneur de forme */
-.form-container {
-  max-width: 300px;
-  padding: 20px;
-  background-color: #1c87c9;
-}
-
 /* Largeur complète pour les champs de saisie */
-.form-container input[type=text],
-.form-container input[type=password] {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #eee;
-}
-
 /*Quand les entrées sont concentrées, faites quelque chose */
-.form-container input[type=text]:focus,
-.form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
 /* Stylez le bouton de connexion*/
-.form-container .btn {
-  background-color: #8ebf42;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  opacity: 0.8;
-}
-
 /* Stylez le bouton pour annuler */
 /* Planez les effets pour les boutons */
-.form-container .btn:hover,
-.open-button:hover {
-  opacity: 1;
-}
-
 /* -------------------end popup-------------------- */
 /* -------------------------------------------------- */
 @media (max-width: 500px) {
@@ -656,9 +620,6 @@ nav .navbar-container ul li:hover .enumCountrys {
   .travel-menu-item {
     flex-direction: column;
     text-align: center;
-  }
-  .form-container {
-    width: 90%;
   }
   .contact-container {
     display: flex;

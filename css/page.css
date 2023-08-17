@@ -268,7 +268,7 @@ nav .navbar-container ul li:hover .enumCountrys {
 
 #about h2 {
     font-size: 2.3rem;
-    /* margin-top: 45px; */
+
 }
 
 #about h3 {
@@ -655,9 +655,9 @@ nav .navbar-container ul li:hover .enumCountrys {
         text-align: center;
     }
 
-    .form-container {
+    /* .form-container {
         width: 90%;
-    }
+    } */
 
     .contact-container {
         display: flex;
