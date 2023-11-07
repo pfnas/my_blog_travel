@@ -702,7 +702,7 @@ nav .navbar-container ul li:hover .enumCountrys {
   animation-name: loaderCamion;
   animation-duration: 15s;
   animation-timing-function: 1;
-  opacity: 0;
+  opacity: 1;
 }
 
 @keyframes loaderCamion {
