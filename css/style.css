@@ -697,77 +697,23 @@ nav .navbar-container ul li:hover .enumCountrys {
 
 .loader {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
+  z-index: 1000;
   animation-name: loaderCamion;
   animation-duration: 15s;
-  animation-timing-function: 1;
+  animation-iteration-count: 2;
   opacity: 1;
 }
 
 @keyframes loaderCamion {
-
-  /* 0% {
-    left: 10%;
-    opacity: 0;
-  }
-
-  10% {
-    left: 10%;
-    opacity: 1;
-  }
-
-  20% {
-    left: 20%;
-    opacity: 1;
-  }
-
-  30% {
-    left: 30%;
-    opacity: 1;
-  }
-
-  40% {
-    left: 40%;
-    opacity: 1;
-  }
-
-  50% {
-    left: 50%;
-    opacity: 1;
-  }
-
-  60% {
-    left: 60%;
-    opacity: 1;
-  }
-
-  70% {
-    left: 70%;
-    opacity: 1;
-  }
-
-  80% {
-    left: 80%;
-    opacity: 1;
-  }
-
-  90% {
-    left: 90%;
-    opacity: 1;
-  }
-
-  100% {
-    left: 92.5%;
-    opacity: 1;
-  } */
   from {
     left: 0;
     opacity: 0
   }
 
   to {
-    left: 100%;
+    left: 96.5%;
     opacity: 1
   }
 }
