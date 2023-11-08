@@ -700,8 +700,6 @@ nav .navbar-container ul li:hover .enumCountrys {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*z-index: 1000;
-  */
   animation-name: loaderCamion;
   animation-duration: 5s;
   animation-iteration-count: 3;

@@ -489,6 +489,21 @@ nav .navbar-container ul li:hover .enumCountrys {
         opacity: 0.95;
     }
 
+    .loader {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: loaderCamion;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
     .navbar-container input[type="checkbox"],
     .navbar-container .hamburger-lines {
         display: block;
@@ -1065,13 +1080,6 @@ span a {
 }
 
 span a:hover {
-    text-transform: scale(1.95);
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    color: red;
-}
-
-span .loader {
     text-transform: scale(1.95);
     transition: 0.5s ease-in-out;
     cursor: pointer;
