@@ -701,7 +701,7 @@ nav .navbar-container ul li:hover .enumCountrys {
   left: 50%;
   z-index: 1000;
   animation-name: loaderCamion;
-  animation-duration: 15s;
+  animation-duration: 8s;
   animation-iteration-count: 2;
   opacity: 1;
 }
