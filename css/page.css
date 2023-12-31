@@ -296,6 +296,16 @@ nav .navbar-container ul li:hover .enumCountrys {
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+/* .card_interlayer {
+    background-color: #d6d6d6;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+} */
+
 .about-img {
     flex: 1 1 400px;
     padding: 30px;
@@ -640,6 +650,11 @@ nav .navbar-container ul li:hover .enumCountrys {
     .display_flag {
         padding: 30px 50px 20px;
     }
+
+    .landscape {
+
+        padding: 5px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -730,7 +745,7 @@ nav .navbar-container ul li:hover .enumCountrys {
 
 img {
     width: 100%;
-    max-height: 440px;
+    height: auto;
 }
 
 
@@ -785,7 +800,7 @@ input[type=radio] {
 
     overflow: hidden;
     position: relative;
-    max-width: 600px;
+    max-width: 769px;
     margin: 2rem auto
 }
 
@@ -797,7 +812,7 @@ input[type=radio] {
 .photos-mini5,
 .photos-mini6 {
 
-    padding-top: 78%;
+    padding-top: 80%;
 
     /* il s'agit du ratio pour le responsive*/
     display: flex;
