@@ -1,31 +1,55 @@
+// ============================
+// Sélection des éléments
+// ============================
 const clickCamion = document.querySelector(".loader");
-console.log(clickCamion)
-const img =document.querySelector("img");
+const img = document.querySelector(".loader img"); // plus précis que "img"
+const cancelPopUp = document.getElementById("cancelPopUp");
+const popupForm = document.getElementById("popupForm");
 
+// Debug console (à retirer en prod)
+console.log("Loader trouvé:", clickCamion);
 
-clickCamion.addEventListener("click", eventAdd)
+// ============================
+// Fonctions
+// ============================
 
-// let clickCamion = document.querySelector(".loader")
-clickCamion.addEventListener("click", openForm);
+// Ouvrir la popup (ou alerte provisoire)
 function openForm() {
-    // document.getElementById("popupForm").style.display = "block";
-    // document.getElementById("popupForm").style.background = "green";
-    alert("en panne")
-    }
-    
-let cancelPopUp = document.getElementById("cancelPopUp")
-cancelPopUp.addEventListener("click", closeForm)
-function closeForm() {
-    document.getElementById("popupForm").style.display = "none";
-    }
+  if (popupForm) {
+    popupForm.style.display = "block";
+  } else {
+    alert("🚧 En panne, page en construction !");
+  }
+}
 
-// function eventAdd(){
-//     alert("Page du camion en construction");
-//     img.style.position ="fixed";
-//     top:0;
-//     left: 0;
-//     img.style.zIndex = "10000";
-//     img.style.width = "500px";
-//     img.style.height = "auto";
-//     img.src = "./Assets/camion.jpg"
-// }
+// Fermer la popup
+function closeForm() {
+  if (popupForm) {
+    popupForm.style.display = "none";
+  }
+}
+
+// Exemple d’alternative : afficher l’image du camion en overlay
+function eventAdd() {
+  if (!img) return;
+  img.style.position = "fixed";
+  img.style.top = "0";
+  img.style.left = "0";
+  img.style.zIndex = "10000";
+  img.style.width = "500px";
+  img.style.height = "auto";
+  img.src = "./Assets/camion.jpg";
+}
+
+// ============================
+// Écouteurs d’événements
+// ============================
+if (clickCamion) {
+  clickCamion.addEventListener("click", openForm);
+  // 👉 Si tu veux l’effet "afficher l’image du camion" au lieu de l’alerte :
+  // clickCamion.addEventListener("click", eventAdd);
+}
+
+if (cancelPopUp) {
+  cancelPopUp.addEventListener("click", closeForm);
+}
