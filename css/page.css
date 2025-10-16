@@ -1,0 +1,1843 @@
+:root {
+  --bg: #F8F9FA;
+  --card-bg: #FFFFFF;
+  --text: #333333;
+  --primary: #2E8B8B;
+  --accent: #EF476F;
+  --secondary: #FFD166;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+  --bg: #1E1E1E;
+  --card-bg: #2A2A2A;
+  --text: #E0E0E0;
+  --primary: #63C7B2;
+  --accent: #FF6B6B;
+  --secondary: #FFD166;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+    font-family: Winterland;
+    src: url(../font-winterland/Winterland.otf);
+}
+:root {
+  --primary: #2E8B8B;    /* océan */
+  --accent: #EF476F;     /* corail */
+  --secondary: #FFD166;  /* sable */
+  --background: #F8F9FA; /* fond du site */
+  --text: #333333;
+}
+
+/* fond du site */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  body { background-color: var(--bg); color: var(--text); }
+
+}
+
+/* bloc travel */
+
+.travel-menu-item { 
+    background-color: var(--card-bg); box-shadow: 0 10px 30px var(--shadow); 
+}
+
+/* titre */
+.travel-title a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.travel-title a:hover {
+  color: var(--accent);
+}
+
+/* image */
+.travel-img {
+  width: 80%;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 3px solid var(--primary);
+}
+
+
+.travel-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* texte */
+.travel-description {
+  width: 100%;
+  overflow-wrap: break-word;
+  color: var(--text);
+}
+
+
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000
+}
+
+
+.logo {
+    font-family: Winterland, sans-serif;
+    text-transform: capitalize;
+    font-size: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Winterland, sans serif;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h4 .small {
+    font-size: 1.5em;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+p,
+h2,
+.display_flag {
+    padding: 30px 50px 20px;
+}
+
+/*----------------display flag-----------------*/
+.flag {
+    display: flex;
+    justify-content: center;
+}
+
+.display_flag {
+    width: 15rem;
+}
+
+/* ///////////..utility classes../////////// */
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+/*------------site en construction--------------------------*/
+.culture_nomade {
+    position: absolute;
+    left: 130px;
+    top: 170px;
+    color: white;
+    background-color: #000;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #16a083;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    transform: translate(5px 5px);
+    transition: 1s ease-out;
+    -webkit-transform: translate(5px 5px);
+    -moz-transform: translate(5px 5px);
+    -ms-transform: translate(5px 5px);
+    -o-transform: translate(5px 5px);
+    -webkit-transition: 1s ease-out;
+    -moz-transition: 1s ease-out;
+    -ms-transition: 1s ease-out;
+    -o-transition: 1s ease-out;
+}
+
+.btn-primary:hover {
+    background: #117964;
+    transition: background 0.3s ease-in-out;
+}
+
+/* ............/navbar/............ */
+
+nav .navbar-container ul li:hover .enumCountrys {
+    display: block;
+}
+
+.enumCountrys {
+    display: none;
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.enumCountrys a {
+    padding: 10px;
+    border-bottom: none;
+}
+
+/* .enumCountrys a:hover, */
+.enumCountrys a:active {
+    border-bottom: none;
+    background-color: #f2f2f2;
+}
+
+.menuDeroulant>a::after {
+    content: "*";
+    font-size: 12px;
+}
+
+.enumCountrys {
+    display: none;
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    z-index: 1000;
+    background-color: #aaa;
+}
+
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    height: 50px;
+    z-index: 12;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items {
+    order: 2;
+    display: flex;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+    color: #117964;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo {
+    order: 1;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/*-----------------navbar------------------------*/
+
+/* ............//// Showcase styling ////......... */
+
+.showcase-area {
+    height: 50vh;
+    background: linear-gradient(rgba(240, 240, 240, 0.144),
+            rgba(255, 255, 255, 0.336)),
+        url("../Assets/Kirghistan/lake_issykul.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+.main-title {
+    text-transform: uppercase;
+    margin-top: 1.5em;
+}
+
+/* ......//about us//...... */
+/* 
+#about {
+    padding: 50px 0;
+    background: #f5f5f7;
+} */
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* #about h2 {
+    font-size: 2.3rem;
+} */
+
+#about h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.card {
+    background-color: #d6d6d6;
+    display: contents;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.about-img {
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+@keyframes about-img-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+
+.about-text {
+    flex: 1 1 400px;
+    padding: 0px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+
+.about-img img {
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+    margin: 10px;
+}
+.about-img img {
+  width: 100%;
+  display: block;
+  border-radius: 12px; /* arrondi léger pour adoucir */
+  box-shadow: 0 25px 40px var(--shadow); /* ombre prononcée */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* petit effet au survol pour accentuer le côté "plane" */
+.about-img img:hover {
+  transform: translateY(-5px); /* remonte un peu */
+  box-shadow: 0 50px 60px rgba(0, 0, 0, 1);
+}
+
+
+/* ..........////travel category///........... */
+
+#travel, #travel-menu{
+    padding: 5rem 0 10rem 0;
+      background-color: rgb(240, 237, 237); /* gris très léger */
+  padding: 2rem 1rem; /* un peu d'air autour */
+}
+
+
+#travel h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.travel-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.travel-container img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container {
+    margin: 0 1rem;
+    position: relative;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.img-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.6s ease-in-out 0.5s;
+}
+
+.img-content h3 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.img-content a {
+    font-size: 1.2rem;
+}
+
+.img-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    opacity: 0;
+    z-index: 1;
+
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.img-container:hover .img-content {
+    opacity: 1;
+    top: 40%;
+}
+
+/* .........travel Menu/............ */
+
+.travel-menu-heading {
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #666;
+}
+
+.travel-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+}
+
+.travel-menu-container img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.travel-menu-item {
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.travel-description {
+    margin: auto 1.5rem;
+}
+
+.font-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #444;
+}
+
+.travel-description p {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.travel-description .travel-price {
+    color: #117964;
+    font-weight: 700;
+}
+
+#footer h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2.6rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(65, 65, 65);
+}
+
+/* ......../ media query /.......... */
+
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 0.95;
+    }
+
+    .loader {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: loaderCamion;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+        display: block;
+    }
+
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .interlayerPictures {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .logo {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 2rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.menu-items {
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(35deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-35deg);
+    }
+
+    /* ......./ travel /......... */
+
+    .travel-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .travel-type:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    .travel-type {
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .img-container {
+        margin: 0;
+    }
+
+    p,
+    h2,
+    .display_flag {
+        padding: 30px 50px 20px;
+    }
+
+    .landscape {
+
+        padding: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 65%;
+    }
+
+    .navbar .menu-items li {
+        font-size: 1.6rem;
+    }
+
+    .enumCountrys {
+        display: none;
+        position: absolute;
+        top: 52px;
+        width: 100%;
+        z-index: 1000;
+        background-color: #aaa;
+        left: 200px;
+    }
+
+    .travel-menu-container img {
+        margin: auto;
+    }
+
+    .travel-menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-img {
+        width: 90%;
+        margin: 3rem auto;
+    }
+
+    .logo {
+        position: absolute;
+        top: 06px;
+        right: 15px;
+        font-size: 3rem;
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 2.5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .about-text {
+        padding: 0;
+    }
+
+    .about-img {
+        padding: 0px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .img-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .img-container .btn {
+        font-size: 0.7rem;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .showcase-area {
+        height: 50vmax;
+    }
+}
+
+/*-----------------------------------carousel pictures---------------------*/
+
+
+* {
+    box-sizing: border-box
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.illustration-country {
+    width: 100%;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+/*------------------------------------------------Slider---------------------------------------------
+-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------*/
+.landscape {
+    background-color: #dbdbdb;
+}
+
+.landscape p {
+    /* padding: 0 200px; */
+    text-align: center;
+}
+
+/* Padding général pour toutes les sections */
+section {
+    padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 5%, 4rem); 
+    /* vertical: entre 2rem et 6rem selon la largeur
+       horizontal: entre 1rem et 4rem selon la largeur */
+}
+/* Espacement interne des conteneurs */
+.about-wrapper,
+.interlayer,
+.carousel-section {
+    padding: clamp(1.5rem, 4vw, 4rem) clamp(1rem, 4%, 3rem);
+}
+/* Card spacing */
+.about-img .card,
+.interlayer .card {
+    margin-bottom: clamp(1rem, 2vw, 2.5rem);
+}
+.about-text p {
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+    line-height: 1.6; /* toujours confortable pour la lecture */
+}
+/* Padding général pour toutes les sections */
+section {
+    padding: 1.5em; /* 60px en haut et en bas, 20px à gauche et droite */
+}
+
+/* Espacement interne des conteneurs */
+.about-wrapper,
+.interlayer,
+.carousel-section {
+    padding: 40px 20px;
+}
+
+/* Card spacing */
+.about-img .card,
+.interlayer .card {
+    margin-bottom: 30px; /* espace entre les cartes */
+}
+
+/* Texte à l'intérieur des sections */
+.about-text p {
+    margin-bottom: 20px; /* espace entre les paragraphes */
+    line-height: 1.6; /* meilleur confort de lecture */
+}
+
+/* Galerie / carousel */
+.carousel {
+    padding: 20px 0;
+}
+
+.carousel-thumbnails {
+    margin-top: 15px;
+}
+
+/* Footer padding */
+#footer {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Ajustement général pour mobile */
+@media (max-width: 768px) {
+    section {
+        padding: 0;
+    }
+
+    .about-wrapper,
+    .carousel-section {
+        padding: 30px 15px;
+    }
+
+    .about-text p {
+        margin-bottom: 0;
+    }
+}
+
+
+
+input[type=radio] {
+
+    position: absolute;
+    left: -9999px
+}
+
+/*on cache tous les input*/
+
+.slider-input label,
+.slider-input2 label,
+.slider-input3 label,
+.slider-input4 label,
+.slider-input5 label,
+.slider-input6 label {
+
+    cursor: pointer
+}
+
+.slider-input,
+.slider-input2,
+.slider-input3,
+.slider-input4,
+.slider-input5,
+.slider-input6 {
+
+    overflow: hidden;
+    position: relative;
+    max-width: 769px;
+    margin: 2rem auto
+}
+
+
+.photos-mini,
+.photos-mini2,
+.photos-mini3,
+.photos-mini4,
+.photos-mini5,
+.photos-mini6 {
+
+    padding-top: 77%;
+    align-items: center;
+    /* il s'agit du ratio pour le responsive*/
+    display: flex;
+    justify-content: center;
+}
+
+/*les photos occupent la même place selon la largeur du conteneur*/
+.miniature,
+.miniature2,
+.miniature3,
+.miniature4,
+.miniature5,
+.miniature6 {
+    flex: 1;
+    padding: .25rem;
+
+}
+
+/*grande photo*/
+.fenetre,
+.fenetre2,
+.fenetre3,
+.fenetre4,
+.fenetre5,
+.fenetre6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .6s, opacity .6s;
+    transform: translatex(-100%);
+    opacity: 0;
+    -webkit-transform: translatex(-100%);
+    -moz-transform: translatex(-100%);
+    -ms-transform: translatex(-100%);
+    -o-transform: translatex(-100%);
+    -webkit-transition: transform .6s, opacity .6s;
+    -moz-transition: transform .6s, opacity .6s;
+    -ms-transition: transform .6s, opacity .6s;
+    -o-transition: transform .6s, opacity .6s;
+}
+
+.fen:checked~.fenetre,
+.fen2:checked~.fenetre2,
+.fen3:checked~.fenetre3,
+.fen4:checked~.fenetre4,
+.fen5:checked~.fenetre5,
+.fen6:checked~.fenetre6 {
+
+    transform: translatex(0%);
+    opacity: 1
+}
+
+.figcaption,
+.figcaption2,
+.figcaption3,
+.figcaption4,
+.figcaption5,
+.figcaption6 {
+    /*optionnel*/
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    padding: .25rem;
+    transition: opacity .4s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: hsla(0, 0%, 0%, .8)
+}
+
+.fen:checked~.figcaption,
+.fen2:checked~.figcaption2,
+.fen3:checked~.figcaption3,
+.fen4:checked~.figcaption4,
+.fen5:checked~.figcaption5,
+.fen6:checked~.figcaption6 {
+
+    opacity: 1
+}
+
+.interlayer {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.miniature img,
+.miniature2 img,
+.miniature3 img,
+.miniature4 img,
+.miniature5 img,
+.miniature6 img {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    border: 2px solid #fff
+}
+
+.interlayer img {
+    object-fit: cover;
+    width: 30%;
+    padding: 1px;
+    border: 3px solid #dcdbdb;
+    box-shadow: rgba(0, 0, 0, 0.4) 5.95px 5.95px 9.6px;
+    margin: 1%;
+}
+
+
+.culture_nomade {
+    text-align: center;
+}
+
+/*----------------carousel landscape Kirghistan------------------------*/
+* {
+    box-sizing: border-box
+}
+
+img {
+
+    max-width: 100%;
+
+}
+
+/*pour le saut de page, on cree une class que l'on met en display:none*/
+.target {
+
+    display: none
+}
+
+
+/* englobe le slider */
+
+.cadre_diapo {
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.interieur_diapo {
+    display: flex;
+    width: 400%;
+    transition: transform .6s ease-in-out
+}
+
+.description {
+    position: relative;
+    text-align: center;
+    min-width: 800px;
+}
+
+@media(max-width: 800px) {
+    .description {
+        min-width: 100%;
+    }
+}
+
+.description span {
+    position: absolute;
+    left: 0;
+    top: 2%;
+    font-size: 75%;
+    display: flex;
+    padding: .5rem;
+    justify-content: center;
+    color: white;
+    background: hsla(0, 0%, 0%, .35)
+}
+
+
+#votre_id1:target~.cadre_diapo .interieur_diapo {
+    transform: translatex(0)
+}
+
+/*image 1*/
+
+#votre_id2:target~.cadre_diapo .interieur_diapo {
+    transform: translatex(-25%)
+}
+
+/*image 2*/
+
+#votre_id3:target~.cadre_diapo .interieur_diapo {
+    transform: translatex(-50%)
+}
+
+/*image 3*/
+
+#votre_id4:target~.cadre_diapo .interieur_diapo {
+    transform: translatex(-75%)
+}
+
+#votre_id5:target~.cadre_diapo .interieur_diapo {
+    transform: translatex(-100%);
+    -webkit-transform: translatex(-100%);
+    -moz-transform: translatex(-100%);
+    -ms-transform: translatex(-100%);
+    -o-transform: translatex(-100%);
+}
+
+/*image 4*/
+/*navigation avec images miniatures*/
+.navigation_diapo {
+    display: flex;
+    /*permet d'aligner les photos les unes à la suite des autres, on peut aussi utiliser le positionnement absolu*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+.navigation_diapo li {
+    padding: .25rem;
+}
+
+.navigation_diapo img {
+    border: 3px solid white;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+/*----------------------------------------------*/
+
+
+@media (min-width:31.25rem) {
+    .description span {
+        font-size: initial
+    }
+}
+
+@media(max-width: 600px) {
+    img {
+        width: 100%;
+        max-height: 330px;
+        object-fit: cover;
+    }
+
+    p,
+    h2,
+    .display_flag {
+        padding: 30px 20px 20px;
+    }
+}
+
+@media(max-width: 500px) {
+    img {
+        width: 100%;
+        max-height: 280px;
+    }
+}
+
+@media(max-width: 450px) {
+    img {
+        width: 100%;
+        max-height: 240px;
+    }
+
+    p,
+    h2,
+    .display_flag {
+        padding: 15px 10px 20px;
+    }
+
+    #exept3 {
+        max-height: 215px;
+    }
+
+    .logo {
+        font-size: 2em;
+        top: 17px;
+    }
+}
+
+span a {
+    font-style: italic;
+    font-weight: 900;
+}
+
+span a:hover {
+    text-transform: scale(1.95);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    color: red;
+}
+/* conteneur global */
+.travel-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* chaque bloc : 2 colonnes sur desktop */
+.travel-menu-item {
+  flex: 0 0 calc(50% - 1rem);
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #d5d5d5; /* optionnel */
+  display: flex;
+  flex-direction: column; /* titre -> image -> texte */
+  align-items: center;    /* centre tout horizontalement */
+  text-align: center;
+}
+
+/* responsive 1 colonne sur mobile */
+@media (max-width: 768px) {
+  .travel-menu-item {
+    flex: 0 0 100%;
+  }
+}
+
+/* titre centré en haut */
+.travel-title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* image ronde et centrée */
+.travel-img {
+  width: 80%;              /* occupe 80% du bloc */
+  max-width: 300px;        /* limite max */
+  aspect-ratio: 1 / 1;     /* garantit un carré (CSS moderne) */
+  border-radius: 50%;      /* cercle parfait */
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.travel-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* remplit bien le cercle */
+  display: block;
+}
+
+/* texte */
+.travel-description {
+  width: 100%;
+  overflow-wrap: break-word;
+}
+/* --- Mode clair (par défaut) --- */
+:root {
+  --bg: #F8F9FA;
+  --card-bg: #FFFFFF;
+  --text: #333333;
+  --primary: #2E8B8B;
+  --accent: #EF476F;
+  --secondary: #FFD166;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* --- Mode sombre --- */
+body.dark-mode {
+  --bg: #1E1E1E;
+  --card-bg: #2A2A2A;
+  --text: #E0E0E0;
+  --primary: #63C7B2;
+  --accent: #FF6B6B;
+  --secondary: #FFD166;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+/* appliquer les variables */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.travel-menu-item, .about-img img {
+  background-color: var(--card-bg);
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.travel-title a {
+  color: var(--primary);
+}
+
+.travel-title a:hover {
+  color: var(--accent);
+}
+#darkModeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.2rem;
+  z-index: 1000;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.1);
+}
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Image in lightbox */
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.8);
+}
+
+/* Close on hover pointer */
+.lightbox-overlay::after {
+  content: '✖';
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 99999; /* << plus grand que l'overlay de img-container */
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.8);
+}
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 99999; /* s'assure que c'est au-dessus de tout */
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.8);
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+    .section{
+        margin: 0;
+        padding: 25px;
+    }
+    .interlayer img {   
+    width: 80%;   
+}
+}
+/* Miniatures scrollables */
+.gallery-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+}
+
+.gallery-thumbs img {
+  flex: 0 0 auto;
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.gallery-thumbs img:hover {
+  transform: scale(1.1);
+}
+
+/* Scrollbar optionnelle */
+.gallery-thumbs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-thumbs::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
+/* Flèches */
+.gallery-btn {
+  background-color: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  transition: background 0.2s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.gallery-prev { left: 5px; }
+.gallery-next { right: 5px; }
+
+.gallery-btn:hover { background-color: rgba(0,0,0,0.7); }
+
+/* Container pour chaque carousel */
+.gallery-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-main {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+
+/* Container des miniatures */
+.gallery-thumbs {
+  display: flex;
+  flex-wrap: nowrap;          /* une seule ligne */
+  overflow-x: auto;           /* scroll horizontal si trop large */
+  overflow-y: hidden;         /* pas de scroll vertical */
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch; /* scroll fluide sur mobile */
+  white-space: nowrap;        /* empêche le retour à la ligne */
+}
+
+/* Miniatures dans des boîtes */
+.gallery-thumbs img {
+  flex: 0 0 auto;             /* taille fixe, pas de shrink */
+  width: 80px;                /* largeur boîte */
+  height: 80px;               /* hauteur boîte */
+  object-fit: cover;          /* remplit la boîte sans déformer */
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+/* Hover effet */
+.gallery-thumbs img:hover {
+  transform: scale(1.1);
+}
+
+/* Scrollbar optionnelle */
+.gallery-thumbs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-thumbs::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
+.gallery-thumbs {
+    display: flex !important;
+    flex-wrap: nowrap !important;   /* jamais de retour à la ligne */
+    overflow-x: auto !important;    /* scroll horizontal */
+    overflow-y: hidden !important;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    scroll-behavior: smooth;        /* scroll fluide */
+    -webkit-overflow-scrolling: touch; /* inertie sur mobile */
+}
+
+/* Masquer la scrollbar visuellement mais garder le scroll */
+.gallery-thumbs::-webkit-scrollbar {
+    display: none;
+}
+.gallery-thumbs {
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.gallery-thumbs img {
+    flex: 0 0 auto !important;
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover !important;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.gallery-thumbs img:hover {
+    transform: scale(1.1);
+}
+/* --- Styles universels pour les galeries --- */
+.gallery-thumbs {
+  display: flex;
+  flex-wrap: nowrap;        /* Empêche le retour à la ligne */
+  overflow-x: auto;         /* Permet le défilement horizontal */
+  gap: 0.5rem;              /* Espacement entre miniatures */
+  padding: 0.5rem 0;
+  scrollbar-width: thin;    /* Scrollbar fine sur Firefox */
+  scrollbar-color: #888 transparent;
+}
+
+.gallery-thumbs::-webkit-scrollbar {
+  height: 8px;              /* Taille discrète de la barre */
+}
+
+.gallery-thumbs::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.gallery-thumbs::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.gallery-thumb {
+  flex: 0 0 auto;           /* Taille fixe, pas de rétrécissement */
+  width: 100px;             /* Largeur miniature */
+  height: 70px;             /* Hauteur miniature */
+  object-fit: cover;        /* Garde les proportions */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery-thumb.active {
+  border: 2px solid #ff9800;
+  opacity: 1;
+}
+p {
+  text-align: center; /* Centré sur desktop */
+  max-width: 800px;   /* Optionnel : limite la largeur pour une meilleure lecture */
+  margin: 0 auto;     /* Centre le bloc dans la page */
+  line-height: 1.6;   /* Améliore la lisibilité */
+  font-size: 1.1rem;  /* Taille lisible */
+}
+
+/* Quand l'écran est plus petit (tablette, mobile) */
+@media (max-width: 768px) {
+  p {
+    text-align: left; /* Aligne à gauche sur mobile */
+    padding: 0 15px;  /* Un peu d’espace sur les côtés */
+    margin: 0 1.5em;
+  }
+}
+.image-section {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;     /* Centre verticalement (si tu veux) */
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000;  /* Optionnel : fond pour faire ressortir l’image */
+}
+
+.responsive-image, .gallery-carousel {
+  width: 80%;      /* Taille par défaut sur desktop */
+  height: auto;    /* Garde les proportions */
+  border-radius: 10px;  /* Optionnel : coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optionnel : ombre légère */
+  transition: width 0.3s ease; /* Animation douce quand la taille change */
+}
+
+/* En responsive (mobile/tablette) */
+@media (max-width: 768px) {
+  .responsive-image, .gallery-carousel {
+    width: 95%; /* Passe à 95% sur petit écran */
+  }
+}
+/* ===== Bloc drapeau ===== */
+.flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+}
+
+.display_flag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.display_flag:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Image du drapeau */
+.display_flag img {
+  width: 180px;
+  border-radius: 1rem;
+  border: 2px solid #e0e0e0;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.display_flag img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton */
+.display_flag .btn {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 140, 255, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.display_flag .btn:hover {
+  background: linear-gradient(135deg, #005ec7, #00aaff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 140, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .display_flag img {
+    width: 130px;
+  }
+}
+.flag.is {
+  background: linear-gradient(135deg, #e8f4ff 0%, #d7ebf8 100%);
+}
+
+.flag.is .display_flag .btn {
+  background: linear-gradient(135deg, #007bff, #00cfff);
+  box-shadow: 0 4px 12px rgba(0, 140, 255, 0.3);
+}
+
+.flag.is .display_flag .btn:hover {
+  background: linear-gradient(135deg, #0060d4, #00a9e0);
+  box-shadow: 0 6px 18px rgba(0, 140, 255, 0.4);
+}
+.flag.lk {
+  background: linear-gradient(135deg, #fff8e6 0%, #ffeec2 100%);
+}
+
+.flag.lk .display_flag .btn {
+  background: linear-gradient(135deg, #ffb300, #ff7043);
+  box-shadow: 0 4px 12px rgba(255, 160, 0, 0.3);
+}
+
+.flag.lk .display_flag .btn:hover {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  box-shadow: 0 6px 18px rgba(255, 120, 0, 0.4);
+}
+.flag.in {
+  background: linear-gradient(135deg, #fffaf0 0%, #fff0d1 100%);
+}
+
+.flag.in .display_flag .btn {
+  background: linear-gradient(135deg, #ff9933, #138808);
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+}
+
+.flag.in .display_flag .btn:hover {
+  background: linear-gradient(135deg, #e67e22, #117a65);
+  box-shadow: 0 6px 18px rgba(255, 153, 51, 0.4);
+}
+.flag.it {
+  background: linear-gradient(135deg, #f9fbf6 0%, #e8f5e9 100%);
+}
+
+.flag.it .display_flag .btn {
+  background: linear-gradient(135deg, #008000, #00b894);
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.3);
+}
+
+.flag.it .display_flag .btn:hover {
+  background: linear-gradient(135deg, #006d32, #00a37a);
+  box-shadow: 0 6px 18px rgba(0, 128, 0, 0.4);
+}
+
+.flag.kg {
+  background: linear-gradient(135deg, #fff7f5 0%, #ffeae3 100%);
+}
+
+.flag.kg .btn {
+  background: linear-gradient(135deg, #d62828, #ff7b00);
+  box-shadow: 0 4px 12px rgba(214, 40, 40, 0.3);
+}
+
+.flag.kg .btn:hover {
+  background: linear-gradient(135deg, #b71c1c, #ff6f00);
+  box-shadow: 0 6px 18px rgba(214, 40, 40, 0.4);
+}
+.flag.no {
+  background: linear-gradient(135deg, #eef4fa 0%, #dce7f3 100%);
+}
+
+.flag.no .btn {
+  background: linear-gradient(135deg, #c8102e, #0033a0);
+  box-shadow: 0 4px 12px rgba(0, 51, 160, 0.3);
+}
+
+.flag.no .btn:hover {
+  background: linear-gradient(135deg, #a60d25, #00287a);
+  box-shadow: 0 6px 18px rgba(0, 51, 160, 0.4);
+}
+

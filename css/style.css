@@ -1,0 +1,260 @@
+/* ===== Reset / global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== Carrousel ===== */
+.carousel {
+    position: relative;
+    margin: 2rem 0;
+    padding: clamp(1rem, 2vw, 2.5rem) 0;
+}
+
+.carousel .slide {
+    display: none;
+    text-align: center;
+    position: relative;
+}
+
+.carousel .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+blockquote {
+  position: relative;
+  margin: 2rem auto;
+  max-width: min(75ch, 90%);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+blockquote {
+  text-align: center;
+  font-style: oblique;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border-left: 4px solid #333;
+  display: inline-block;
+  quotes: "«" "»";
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 2em;
+  vertical-align: -0.4em;
+  margin-right: 0.2em;
+  color: #555;
+}
+
+blockquote:after {
+  content: close-quote;
+  font-size: 2em;
+  vertical-align: -0.4em;
+  margin-left: 0.2em;
+  color: #555;
+}
+
+/* ===== Miniatures ===== */
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+     margin-top: clamp(0.5rem, 1.5vw, 1.5rem);
+}
+
+.carousel-thumbnails img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+.carousel-thumbnails img.active {
+    border: 2px solid #333;
+}
+
+/* ===== Flèches navigation ===== */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+/* ............//// Showcase styling ////......... */
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../Assets/Kirghistan/lake_issykul.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    .carousel-thumbnails {
+        display: none;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 1.5rem;
+        padding: 6px 10px;
+    }
+}
+
+#popupForm {
+  display: none; /* caché par défaut */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  z-index: 1000;
+  max-width: 90%;
+}
+
+/* Croix de fermeture */
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+/* Overlay popup */
+.login-popup {
+    display: none; /* caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* overlay sombre */
+    z-index: 9999; /* très au-dessus */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup central */
+#popupForm {
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    z-index: 10000;
+}
+
+/* Croix pour fermer */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* -------- Popup Overlay -------- */
+.login-popup {
+    display: none; /* caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* -------- Popup Box -------- */
+#popupForm {
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    z-index: 10000;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* -------- Croix de fermeture -------- */
+#popupForm .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+
+

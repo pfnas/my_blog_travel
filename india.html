@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/page.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/carousel.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+      <input type="checkbox" id="nav-toggle">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <ul class="menu-items">
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="#travel">Travelling Mode</a></li>
+        <li class="menuDeroulant">
+          <a href="#travel-menu">Some travels</a>
+          <ul class="enumCountrys">
+            <li><a href="./iceland.html">Iceland</a></li>
+            <li><a href="./kirghistan.html">Kirghistan</a></li>
+            <li><a href="./india.html">India</a></li>
+            <li><a href="./turkey.html">Turkey</a></li>
+            <li><a href="./sriLanka.html">Sri Lanka</a></li>
+            <li><a href="./norway.html">Norway</a></li>
+          </ul>
+        </li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <h1 class="logo">Mes Pérégrinations</h1>
+    </div>
+  </nav>
+
+  <div class="background_picture">
+    <img src="./Assets/Inde/boat_resultat-ezgif.com-crop.webp" alt="boat" class="illustration-country">
+  </div>
+
+  <section id="about">
+    <div class="about-wrapper container">
+      <div class="about-text">
+        <h2>L'Inde (भारत).</h2>
+        <div class="flag in">
+          <div class="display_flag">
+            <img src="./Assets/Inde/flag.webp" alt="flag">
+            <button class="btn" id="indTravel">Travel in India</button>
+          </div>
+        </div>
+        <p>✨ L’Inde, aux mille saveurs et couleurs ✨</p>
+        <p>
+          Voyager en Inde, c’est plonger dans une véritable effervescence des sens.
+          Les épices parfument les marchés, les saris éclatent de mille teintes, 
+          et les klaxons se mêlent aux rires dans des rues toujours animées.
+        </p>
+        <p>
+          C’est un pays de contrastes où l’ancien et le moderne s’entrelacent : palais majestueux et temples millénaires côtoient gratte-ciel et trains bondés.
+          Chaque coin de rue raconte une histoire, chaque sourire est une invitation à la découverte.
+          En Inde, on ne se contente pas de voyager… on vit une expérience intense, chaotique parfois, mais toujours vibrante et inoubliable.
+        </p>
+      </div>
+      <div class="about-img">
+        <div class="card">
+          <h3>---</h3>
+          <img src="./Assets/Inde/triporteur_resultat.webp" alt="triporteur" class="lightbox-img">
+        </div>
+        <div class="card">
+          <h3>---</h3>
+          <img src="./Assets/Inde/truck1.1_resultat.webp" alt="truck" class="lightbox-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="login-popup">
+    <div class="form-popup" id="popupForm">
+      <h3>Informations sur l'Inde</h3>
+      <p>Au départ de Barcelone, nous avons pris la compagnie Air Pégasus en direction de Chennai.</p>
+      <button type="button" class="btn cancel" id="cancelPopUp">Fermer</button>
+    </div>
+  </div> -->
+
+  <!-- Carousel Monuments -->
+  <section class="gallery-block">
+    <h2>Quelques Monuments</h2>
+    <p>Quelques monuments et temples représentatifs de l’Inde.</p>
+
+    <div class="gallery-carousel">
+      <button class="gallery-btn gallery-prev">&#10094;</button>
+      <img src="./Assets/Inde/monument7_resultat.webp" alt="Monument" class="gallery-display gallery-main" id="monument-main">
+      <button class="gallery-btn gallery-next">&#10095;</button>
+    </div>
+
+    <div class="gallery-thumbs" id="monument-thumbs">
+      <img src="./Assets/Inde/monument7_resultat.webp" alt="Monument 1" class="gallery-thumb active">
+      <img src="./Assets/Inde/monument1_resultat.webp" alt="Monument 2" class="gallery-thumb">
+      <img src="./Assets/Inde/monument9_resultat_resultat.webp" alt="Monument 3" class="gallery-thumb">
+      <img src="./Assets/Inde/Monument4_resultat.webp" alt="Monument 4" class="gallery-thumb">
+      <img src="./Assets/Inde/Monument5_resultat.webp" alt="Monument 5" class="gallery-thumb">
+      <img src="./Assets/Inde/monument8_resultat.webp" alt="Monument 6" class="gallery-thumb">
+    </div>
+  </section>
+
+  <!-- Carousel Mer d'Arabie -->
+  <section class="gallery-block">
+    <h2>La Mer d'Arabie</h2>
+    <p>Plages, filets et bateaux colorés sur la mer d'Arabie.</p>
+
+    <div class="gallery-carousel">
+      <button class="gallery-btn gallery-prev">&#10094;</button>
+      <img src="./Assets/Inde/pecheur-one_resultat.webp" alt="Fishing Boat" class="gallery-display gallery-main" id="sea-main">
+      <button class="gallery-btn gallery-next">&#10095;</button>
+    </div>
+
+    <div class="gallery-thumbs" id="sea-thumbs">
+      <img src="./Assets/Inde/pecheur-one_resultat.webp" alt="Boat 1" class="gallery-thumb active">
+      <img src="./Assets/Inde/pecheurs-two_resultat.webp" alt="Boat 2" class="gallery-thumb">
+      <img src="./Assets/Inde/pecheur-three_resultat.webp" alt="Boat 3" class="gallery-thumb">
+      <img src="./Assets/Inde/pecheur-four_resultat.webp" alt="Boat 4" class="gallery-thumb">
+      <img src="./Assets/Inde/pecheur-five_resultat.webp" alt="Boat 5" class="gallery-thumb">
+      <img src="./Assets/Inde/pecheur-six_resultat.webp" alt="Boat 6" class="gallery-thumb">
+      <img src="./Assets/Inde/pecheur-seven_resultat.webp" alt="Boat 7" class="gallery-thumb">
+    </div>
+  </section>
+
+  <footer id="footer">
+    <h2>Travels &copy; October 2019</h2>
+  </footer>
+
+  <script src="./js/carousel.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

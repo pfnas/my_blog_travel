@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iceland</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/page.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/carousel.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="./index.html">Home</a></li>
+                <li class="menuDeroulant"><a href="#travel-menu">Some travels</a>
+                    <ul class="enumCountrys">
+                        <li><a href="./norway.html">Norway</a></li>
+                        <li><a href="./iceland.html">Iceland</a></li>
+                        <li><a href="./kirghistan.html">Kirghistan</a></li>
+                        <li><a href="./encours.html">India*</a></li>
+                        <li><a href="./encours.html">Turkey*</a></li>
+                        <li><a href="./encours.html">Sri Lanka*</a></li>
+                        <li><a href="#">Portugal*</a></li>
+                        <li><a href="./italia.html">Italia</a></li>
+                        <li><a href="#">Espagna*</a></li>
+                        <li><a href="#">Croatia*</a></li>
+                        <li><a href="#">.../...</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <h1 class="logo"><a href="./index.html">Mes Pérégrinations</a></h1>
+        </div>
+    </nav>
+
+    <!-- Background Image -->
+    <div class="background_picture">
+        <img src="./Assets/Islande/20160726_051706_resultat.webp" alt="landscape" class="illustration-country">
+    </div>
+
+    <!-- About Iceland -->
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <h2>Iceland</h2>
+                <div class="flag is">
+                    <div class="display_flag">
+                        <a href="https://fr.wikipedia.org/wiki/Islande">
+                            <img src="./Assets/Islande/iceland-flag-png-large(1)_resultat.webp" alt="flag">
+                        </a>
+                        <button class="btn" id="iceTravel">Travel to Iceland</button>
+                    </div>
+                </div>
+                <p>Quatre saisons en un jour, l'immensité de cette terre de feu, d'eau, de glace et de couleurs magnifiques, balayée par le vent.</p>
+                <p>Le soleil de minuit, quelle curieuse sensation d'avoir toujours ce crépuscule ou cette aube qui vous poursuit tout au long des 24 heures de la journée. Plus de repères, mais de magnifiques couleurs qui inondent ces paysages, des sommets dans la brume, des routes interminables, une étrange sensation d'être seul dans un monde où le temps s'est figé.</p>
+                <p>Le pays des solfatares (petites fumerolles de vapeur dégagées par les terres volcaniques) bouillantes, des geysers, des glaciers, des cascades et des volcans est une terre d'aventure. Ses paysages y sont spectaculaires.</p>
+            </div>
+            <div class="about-img">
+                <div class="card">
+                    <h3>Macareu</h3>
+                    <img src="./Assets/Islande/macareu_resultat.webp" alt="travel">
+                </div>
+                <div class="card">
+                    <h3>Harpa Reykjavik Concert Hall and Conference Centre</h3>
+                    <img src="./Assets/Islande/Reykjavic1.webp" alt="travel">
+                </div>
+                <div class="card">
+                    <h3>Port et Marina : Reykjavik</h3>
+                    <img src="./Assets/Islande/Reykjavic2.webp" alt="travel" class="lightbox-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-full" id="lightboxFull" src="" alt="Full image">
+    </div>
+
+    <!-- Carousel Eau -->
+    <section class="gallery-block">
+        <h2>L'eau</h2>
+        <p>L'eau y est omniprésente dans ce monde minéral et de champ de lave.
+            Ma visite en Islande m'a conduit au Cercle d'Or et son célèbre Geysir, qui donne son nom au
+            phénomène d'eau chaude jaillissant à intervalles plus ou moins réguliers, vers les cascades de Gullfoss en
+            passant par le
+            <span><a href="#thing">Thingvellir park</a></span>
+            , dont la faille sépare les continents européen et américain.
+            Les nombreux volcans du pays offrent à cette île une terre bouillante et des sources chaudes aux odeurs
+            souffrées qui
+            alimentent notamment le
+            Camping de Reykjavik, les piscines municipales et plus encore.
+        </p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/20160720_141351_resultat.webp" alt="Gulfoss" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/20160720_141351_resultat.webp" alt="Gulfoss 1" class="gallery-thumb active">
+            <img src="./Assets/Islande/casc.webp" alt="Geyser" class="gallery-thumb">
+            <img src="./Assets/Islande/skogafoss_resultat.webp" alt="Skogafoss" class="gallery-thumb">
+            <img src="./Assets/Islande/20160723_062557_resultat.webp" alt="Landscape" class="gallery-thumb">
+            <img src="./Assets/Islande/geyser.webp" alt="Thing 5" class="gallery-thumb">
+             <img src="./Assets/Islande/cascade.webp" alt="tente" class="gallery-thumb">
+             <img src="./Assets/Islande/casc1.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/20160726_101845_resultat.webp" alt="Thing 6" class="gallery-thumb">
+            <img src="./Assets/Islande/skogafoss.webp" alt="Thing 6" class="gallery-thumb">
+            <img src="./Assets/Islande/small-geysir.webp" alt="Thing 6" class="gallery-thumb">
+            <img src="./Assets/Islande/gey.webp" alt="Thing 6" class="gallery-thumb">
+             <img src="./Assets/Islande/cascade1.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/gey1.webp" alt="Thing 6" class="gallery-thumb">
+            <img src="./Assets/Islande/cas.webp" alt="Thing 6" class="gallery-thumb">
+            <img src="./Assets/Islande/gey2.webp" alt="Thing 6" class="gallery-thumb">
+            <img src="./Assets/Islande/gey3.webp" alt="Thing 6" class="gallery-thumb">
+        </div>
+    </section>
+
+    <!-- Carousel La glace -->
+    <section class="gallery-block">
+        <h2>La glace</h2>
+        <p>
+           C’est une immersion dans les paysages glacés d’Islande, 
+           où le silence, le froid et la lumière 
+           se mêlent pour créer une atmosphère presque irréelle.
+        </p>
+        <p>           
+            Les reflets bleus et argentés, les murmures de l’eau sous 
+            la surface — symbole du feu et du froid qui coexistent.
+            Ce lieu extrême reste un équilibre fragile 
+            de la nature et de la liberté .
+            Tout y est calme, essentiel, suspendu : un instant où le temps 
+            s’arrête.
+        </p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/glacier.webp" alt="glacier" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/glacier.webp" alt="road" class="gallery-thumb active">
+            <img src="./Assets/Islande/joku7.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur8.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/jokursalong.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur1.webp" alt="road2" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur2.webp" alt="rroad" class="gallery-thumb">            
+            <img src="./Assets/Islande/jokur4.webp" alt="road4" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur6.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur8.webp" alt="road5" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur3.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur5.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/jokur_main.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/joku7.webp" alt="rroad" class="gallery-thumb">                     
+        </div>
+    </section>
+        <!-- Carousel La glace -->
+    <section class="gallery-block">
+        <h2>Un univers minéral</h2>
+          
+        <p> « Une île née du feu, façonnée par la glace. Ici, 
+            la terre respire encore, fume,. C'est 
+            un monde minéral à nu. 
+            Les champs de lave s’étendent à perte de vue, noirs, 
+            pétrifiés par le temps. La roche volcanique et
+            la glace se mêlent
+        </p>
+        <p>
+           Tout semble figé, et pourtant, tout bouge, 
+            lentement, inexorablement. C’est un territoire 
+            où la nature impose sa loi.
+            En Islande, le minéral devient vivant. Il raconte la naissance du monde. »
+        </p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/min2.webp" alt="glacier" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+        <img src="./Assets/Islande/min2.webp" alt="road" class="gallery-thumb active"> 
+            <img src="./Assets/Islande/min1.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/min3.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/min4.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/min5.webp" alt="road2" class="gallery-thumb">
+            <img src="./Assets/Islande/min6.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/min7.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/min8.webp" alt="road4" class="gallery-thumb">
+            <img src="./Assets/Islande/min9.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/min10.webp" alt="road5" class="gallery-thumb">
+            <img src="./Assets/Islande/min11.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/min12.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/min13.webp" alt="rroad" class="gallery-thumb">
+        </div>
+    </section>
+
+
+    <!-- Carousel Thingvellir -->
+    <section class="gallery-block" id="thing">
+        <h2>Thingvellir-Park</h2>
+        <p>Le parc de Thingvellir est un amphithéâtre naturel…</p>
+        <p>Il est situé à un point de rencontre entre les plaques tectoniques nord-américaine et
+            eurasienne. Il
+            ressemble à un amphithéâtre naturel bordé de ses falaises noires, traversé de failles, de crevasses qui
+            mènent au
+            grand lac Þingvallavatn. il sépare le continent Américain du continent Européen.
+        </p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/thingvellir-park-1.png" alt="Thingvellir" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/thingvellir-park-1.png" alt="Thing 1" class="gallery-thumb active">
+            <img src="./Assets/Islande/thingvillir.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/thing_pingval_resultat.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/thingvellir-park-2.png" alt="Thing 2" class="gallery-thumb">
+            <img src="./Assets/Islande/pingvallar.webp" alt="Thing 3" class="gallery-thumb">
+            <img src="./Assets/Islande/thing_ping_resultat.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/thingvellir-park-4.png" alt="Thing 4" class="gallery-thumb">
+            <img src="./Assets/Islande/thinh.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/thing_batiments_resultat.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/thingvellir-park-3.png" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/thingvellir-park-5.png" alt="tente" class="gallery-thumb">
+             
+        </div>
+    </section>
+
+    <!-- Carousel Midnight Sun -->
+    <section class="gallery-block">
+        <h2>Midnight Sun</h2>
+        <p>
+            Le soleil de minuit et ses paysages irréels…
+        </p>
+        <p>
+            "En Islande, le soleil de minuit effleure l’horizon sans jamais disparaître. 
+            La nuit se teinte d’or et de rose, et le temps semble suspendu : une journée qui ne finit jamais."
+        </p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/midnight1.webp" alt="Midnight Sun" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/midnight1.webp" alt="Midnight 1" class="gallery-thumb active">
+            <img src="./Assets/Islande/midnight3.webp" alt="Midnight 2" class="gallery-thumb">
+            <img src="./Assets/Islande/midnight5.jpg" alt="Midnight 3" class="gallery-thumb">
+            <img src="./Assets/Islande/midnight2.webp" alt="Midnight 4" class="gallery-thumb">
+            <img src="./Assets/Islande/midnight4.jpg" alt="Midnight 5" class="gallery-thumb">
+            <img src="./Assets/Islande/midnight6.jpg" alt="Midnight 6" class="gallery-thumb">
+            <img src="./Assets/Islande/tent7.webp" alt="Midnight 6" class="gallery-thumb">
+        </div>
+    </section>
+
+    <!-- Sternes (heading and paragraph kept together with carousel) -->
+    <section class="gallery-block">
+        <h2>Les sternes Artique</h2>
+        <p> 
+            Elles crient avant qu’on ne les voie.
+            Des ombres blanches tournent dans le ciel, rapides, précises, presque parfaites.
+            Les sternes arctiques. Petites, mais redoutables.
+            Elles défendent leurs nids, par centaine, par milliers peut-être.
+        </p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/sterne3.jpg" alt="Sterne" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/sterne3.jpg" alt="sternes2" class="gallery-thumb active">
+            <img src="./Assets/Islande/sternes4.jpg" alt="sternes2" class="gallery-thumb">
+            <img src="./Assets/Islande/sternes.jpg" alt="sternes2" class="gallery-thumb">
+            <img src="./Assets/Islande/sternes1.webp" alt="sternes2" class="gallery-thumb">
+            <img src="./Assets/Islande/sternes2.webp" alt="sternes2" class="gallery-thumb">      
+            <img src="./Assets/Islande/sternes5.jpg" alt="sternes2" class="gallery-thumb">
+            <img src="./Assets/Islande/sternes2.webp" alt="sternes2-dup" class="gallery-thumb">
+            <img src="./Assets/Islande/sternes6.webp" alt="sternes2" class="gallery-thumb">
+        </div>
+    </section>
+
+    <p>
+        Un pas de trop, et soudain… le ciel s’abat.
+        Des ailes, des cris, des piqués fulgurants, des coups de bec sur le crâne.
+        On lève les bras, on court, on rit — un peu jaune,on se protège 
+        comme on peut, une capuche, une casquette, les gants.
+        Un instant, on se croirait dans un vieux film d’Hitchcock. que je ne reverrai 
+        plus jamais de la même façon.
+    </p>
+    <p>
+        Mais ici, pas de trucage,
+        en Islande,
+        même les oiseaux ont du caractère.
+    </p>
+
+    <!-- Interlayer Images -->
+    <div class="interlayer">       
+        <div class="interlayerPictures">
+            <h3>Le soleil de minuit en Islande est une expérience à la fois troublante et magique</h3>            
+            <img src="./Assets/Islande/midnight2.webp" alt="Ville" class="lightbox-img">
+            <img src="./Assets/Islande/midnight4.jpg" alt="Ville" class="lightbox-img">
+            <img src="./Assets/Islande/midnight6.jpg" alt="Ville" class="lightbox-img">
+        </div>
+    </div>
+
+    <h2>🔥❄️ Islande: terre de contrastes ❄️🔥</h2>
+    <p>
+        L’Islande, c’est la rencontre 
+        brute entre les éléments.
+        Le feu des volcans façonne des paysages 
+        lunaires, la glace éternelle des glaciers se 
+        reflète dans des lagunes aux reflets d’acier, 
+        et l’eau pure jaillit des sources chaudes.
+        Ici, chaque pas résonne sur une terre minérale, 
+        où la roche noire embrasse les chutes d’eau cristallines et où 
+        le souffle de la terre se fait sentir à travers ses geysers et ses fumerolles.
+        l’Islande est une île où 
+        nature dicte ses lois.
+    </p>
+
+    <!-- On the road -->
+    <section class="gallery-block">
+        <h2>On the road</h2>
+        <p>
+           La route s’étire à perte de vue.
+            Un ruban d’asphalte noir traversant le silence, perdu entre la mer et les montagnes.
+            Ici, chaque kilomètre raconte une histoire — celle du vent, du temps, et de la terre.
+        </p>
+         <div class="interlayer">
+            <div class="about-img">
+                <div class="card">
+                    <img src="./Assets/Islande/snaegllsjokuul.webp" alt="landscape"  class="lightbox-img">
+                    <div class="caption">Welcome!</div>
+                </div>
+            </div>
+        </div>
+        <p>
+            Les couleurs changent sans prévenir.
+            Le vert des mousses devient gris, le gris devient noir, 
+            Le ciel lui-même semble vivant, tantôt lourd et opaque chargé de nuages, tantôt immense et clair 
+            quand surgit le soleil de minuit.
+        </p>
+
+        <div class="interlayer">
+            <div class="about-img">
+                <div class="card">
+                    <img src="./Assets/Islande/sheep.webp" alt="landscape"  class="lightbox-img">
+                    <div class="caption">J'exagère, on rencontre quand même du monde!</div>
+                </div>
+            </div>
+        </div>
+
+        <p>
+            Pas un bruit.
+            Seulement le vent, et la solitude.
+            Les routes d’Islande ne mènent pas seulement quelque part — elles mènent ailleurs,
+            vers ce sentiment d’être seul, face à tout.
+        </p>   
+        <p>
+            La distance ici n’est pas vide,
+            voyager en Islande…
+            c’est se perdre un peu pour mieux se retrouver.
+        </p>
+    </section>
+
+    <!-- Carousel Road -->
+    <section class="gallery-block">
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/road_main.webp" alt="Road main" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/road_main.webp" alt="road" class="gallery-thumb active">
+            <img src="./Assets/Islande/road1.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/road3.webp" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/road.webp" alt="road" class="gallery-thumb">
+             <img src="./Assets/Islande/roadon.webp" alt="troad" class="gallery-thumb">
+            <img src="./Assets/Islande/road2.webp" alt="road2" class="gallery-thumb">
+            <img src="./Assets/Islande/road10.1.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/road4.webp" alt="road4" class="gallery-thumb">
+            <img src="./Assets/Islande/road_travel.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/road5.webp" alt="road5" class="gallery-thumb">
+            <img src="./Assets/Islande/road6.jpg" alt="road" class="gallery-thumb">
+            <img src="./Assets/Islande/tent4.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/road10.webp" alt="rroad" class="gallery-thumb">
+            <img src="./Assets/Islande/road7.webp" alt="rroad" class="gallery-thumb">            
+            <img src="./Assets/Islande/road9.webp" alt="rroad" class="gallery-thumb">
+        </div>
+    </section>
+
+    <p>
+        Ici, le camping, c’est un bout de terrain, 
+        un peu d’herbe battue par le vent, et le ciel pour seul toit.
+        Parfois, un gardien passe dans la journée, et s’il n’est pas là… une boîte à sous.
+        On glisse quelques couronnes, comme un geste de confiance.
+    </p>
+    <p>
+        Si j'avais su dés mon arrivée qu'il est coutumier
+        de laisser une contribution volontaire pour les voyageurs, 
+        j'aurai eu moins de stress à ne pas etrouver mon sac, ma maison à ma descente d'avion.
+        Il est juste "d'usage" de laisser une partie de son materil de camping (réchaud, recharge de gaz, 
+        divers vetements enfin bref  ce qui peut être dune grande utilité
+        pour qui viendra voyager...j'ai même vu deschaussures de randonnée )
+        à son départ définitif,
+        en général dans un coin du camping.
+    </p>
+
+    <!-- Camping -->
+    <section class="gallery-block">
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/tente1.webp" alt="tente" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/tente1.webp" alt="tente" class="gallery-thumb active">
+            <img src="./Assets/Islande/tente2.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/tente3.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/tente4.webp" alt="tente" class="gallery-thumb">           
+             <img src="./Assets/Islande/tent3.webp" alt="tente" class="gallery-thumb">
+              <img src="./Assets/Islande/reyk1.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/tente5.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/tente6.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/tente7.webp" alt="tente" class="gallery-thumb">
+            <img src="./Assets/Islande/tent3.webp" alt="tente" class="gallery-thumb">
+             <img src="./Assets/Islande/tentt.webp" alt="tente" class="gallery-thumb">
+        </div>
+    </section>
+
+    <p>
+        Le soir, on arrive souvent seul.
+        Puis une à une dans la nuit, les tentes poussent.
+        Au matin, un petit village est né.
+        Des voyageurs venus de partout, réunis pour une nuit, avant de reprendre la route.
+    </p>
+    <p>
+        En Islande, le camping n’est pas juste un abri.
+        C’est une manière d’habiter le monde, simplement et librement.
+    </p>
+    <h2>Reykjavick</h2>
+    <!-- ReykjavicK -->
+     <p>Nichée entre mer et montagnes, 
+        c’est la plus septentrionale des capitales du monde. 
+        Une ville née de la vapeur, là où les sources chaudes
+         percent la terre islandaise. 
+     </p>
+     <p>
+        Ici,   la modernité se mêle à la nature : les 
+        toits colorés affrontent le vent du nord, les fumées géothermiques dansent au-dessus des maisons.
+        Le rythme est calme, presque suspendu.
+        Les cafés s’emplissent de chaleur humaine, 
+        les rues résonnent de musique et d’histoires. 
+        Au loin, les glaciers rappellent que la nature n’est jamais 
+        loin, toujours présente.
+    </p>
+   <section class="gallery-block">
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Islande/reykja3.webp" alt="tente" class="gallery-display gallery-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="./Assets/Islande/reykja3.webp" alt="reycjavik" class="gallery-thumb active">
+            <img src="./Assets/Islande/Reykjavic1.webp" alt="reycjavik" class="gallery-thumb">
+            <img src="./Assets/Islande/reykja5.webp" alt="reycjavik" class="gallery-thumb">
+            <img src="./Assets/Islande/reykja7.webp" alt="reycjavik" class="gallery-thumb">
+            <img src="./Assets/Islande/reykja2.webp" alt="reycjavik" class="gallery-thumb">
+             <img src="./Assets/Islande/reykja4.webp" alt="reycjavik" class="gallery-thumb">
+            <img src="./Assets/Islande/reykja6.webp" alt="reycjavik" class="gallery-thumb">
+            <img src="./Assets/Islande/reykja8.webp" alt="reycjavik" class="gallery-thumb">
+            <img src="./Assets/Islande/Reykjavic1.webp" alt="reycjavik" class="gallery-thumb">
+            <img src="./Assets/Islande/reykjavic_panneau.webp" alt="reycjavik" class="gallery-thumb">
+             <img src="./Assets/Islande/Reykjavic2.webp" alt="reycjavik" class="gallery-thumb">
+        </div>
+    </section>
+    <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <h2>Travels &copy; July 2016</h2>
+    </footer>
+
+    <script src="./js/carousel.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

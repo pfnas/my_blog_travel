@@ -1,0 +1,144 @@
+/* Carousel global */
+.gallery-carousel, .slider-input2, .slider-input3 {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.gallery-display, .fenetre2, .fenetre3 {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.gallery-prev { left: 10px; }
+.gallery-next { right: 10px; }
+
+.gallery-thumbs, .photos-mini2, .photos-mini3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.gallery-thumb, .miniature2 label img, .miniature3 label img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  border-radius: 8px;
+}
+
+.gallery-thumb.active, .miniature2 label img.active, .miniature3 label img.active {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition: opacity 0.3s ease;
+  z-index:9999;
+}
+
+.lightbox-overlay.active {
+  opacity:1;
+  pointer-events:all;
+}
+
+.lightbox-overlay img {
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+  object-fit:contain;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .gallery-thumb, .miniature2 label img, .miniature3 label img {
+    width:70px;
+    height:50px;
+  }
+}
+.gallery-main {
+  cursor: pointer;
+  transition: opacity 0.5s ease; /* transition douce */
+}
+
+.lightbox-overlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.lightbox-full {
+  max-width:90%;
+  max-height:90%;
+  border-radius:6px;
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:2rem;
+  color:white;
+  cursor:pointer;
+}
+/* Masquer les flèches en desktop */
+@media (min-width: 769px) {
+  .gallery-btn {
+    display: none;
+  }
+}
+
+/* Les flèches restent visibles en mobile/tablette */
+@media (max-width: 768px) {
+  .gallery-btn {
+    display: block;
+  }
+}
+.gallery-display {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.gallery-display.fade-out {
+  opacity: 0;
+}
+

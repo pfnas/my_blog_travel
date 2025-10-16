@@ -1,0 +1,19 @@
+{
+  "name": "travel-site-official",
+  "version": "1.0.0",
+  "description": "*page contact: effet de fondu\r https://www.youtube.com/watch?v=7sKC9_McrlQ&ab_channel=FormationsExcel%2CAccessetbiend%27autres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfnas/my_blog_travel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pfnas/my_blog_travel/issues"
+  },
+  "homepage": "https://github.com/pfnas/my_blog_travel#readme"
+}

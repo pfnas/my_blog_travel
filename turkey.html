@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkey</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="./index.html">Home</a></li>
+                <li class="menuDeroulant"><a href="#travel-menu">Some travels</a>
+                    <ul class="enumCountrys">
+                        <li><a href="./iceland.html">Iceland</a></li>
+                        <li><a href="./kirghistan.html">Kirghistan</a></li>
+                        <li><a href="./india.html">India</a></li>
+                        <li><a href="./turkey.html">Turkey</a></li>
+                        <li><a href="./sriLanka.html">Sri Lanka</a></li>
+                        <li><a href="./norway.html">Norway</a></li>
+                        <li><a href="#">Portugal</a></li>
+                        <li><a href="#">Italia</a></li>
+                        <li><a href="#">Espagna</a></li>
+                        <li><a href="#">Croatia</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <h1 class="logo"><a href="./index.html">Mes Pérégrinations</a></h1>
+        </div>
+    </nav>
+
+    <!-- Background Image -->
+    <div class="background_picture">
+        <img src="./Assets/Turquie/paysage_resultat.webp" alt="Cappadoce" class="illustration-country">
+    </div>
+
+    <!-- About Turkey -->
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <h2>Turkey.</h2>
+                <div class="flag">
+                    <div class="display_flag">
+                        <img src="./Assets/Turquie/turquie_flag_resultat.webp" alt="flag">
+                        <button class="btn" id="turTravel">Travel in Turkey</button>
+                    </div>
+                </div>
+                <p>
+                   La Turquie est un pays aux mille visages, 
+                   un pont entre l’Orient et l’Occident où chaque paysage 
+                   raconte une histoire. Des coupoles dorées d’Istanbul aux falaises 
+                   lunaires de Cappadoce, le voyageur plonge dans un décor à la fois réel 
+                   et cinématographique. 
+                </p>
+                <p>La cité millénaire d’Istanbul cache sous ses rues la 
+                   mystérieuse Citerne Basilique, immortalisée dans des films cultes comme
+                    James Bond : Bons Baisers de Russie. Plus sombre, 
+                    Midnight Express a marqué l’imaginaire collectif en révélant une 
+                    autre facette du pays.
+                </p>
+                <p>
+                    Mais c’est surtout la Cappadoce, avec ses cheminées de fées et ses vallées sculptées par 
+                    le vent, qui attire le regard du monde entier. 
+                    Ces paysages quasi lunaires ont servi de toile de fond à la saga Star Wars, 
+                    preuve de leur caractère irréel et spectaculaire. Entre histoire millénaire, 
+                    héritage byzantin et ottoman, cinéma et nature, la Turquie est une 
+                    mosaïque d’expériences où chaque pas est une scène de film et
+                    une invitation au voyage.
+                    La douceur du climat et le souvenir d'un thé partagé 
+                </p>
+                <blockquote>@Clo <span class="wink">😉</span></blockquote>
+            </div>
+            <div class="about-img">
+                <div class="card">
+                    <img src="./Assets/Turquie/boat_resultat.webp" alt="travel" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Info -->
+    <div class="login-popup">
+        <div class="form-popup" id="popupForm">
+            <h3>Informations sur la Turquie</h3>
+            <p>Au départ de Marseille, le vol sur la compagnie Air Pegasus se fait en direction d'Istanbul. Le
+                regret est de ne pas avoir atterri directement à Ankara, ce qui nous aurait fait gagner un jour, le
+                point de départ étant la Cappadoce et notre retour prévu à Istanbul.</p>
+            <p>La monnaie y est la livre turque (TRY)</p>
+            <button type="button" class="btn cancel" id="cancelPopUp">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Carousel Cappadoce -->
+    <section class="gallery-block">
+        <h2><a href="https://fr.wikipedia.org/wiki/Cappadoce">Cappadoce</a></h2>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Turquie/cappadoce-heighty.webp" alt="Sculpture" class="gallery-display gallery-main" id="cappadoce-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs" id="cappadoce-thumbs">
+            <img src="./Assets/Turquie/cappadoce-heighty.webp" alt="Sculpture" class="gallery-thumb active">
+            <img src="./Assets/Turquie/cappadoce-three.webp" alt="Sculpture" class="gallery-thumb">
+            <img src="./Assets/Turquie/cappadoce-two.webp" alt="Sculpture" class="gallery-thumb">
+            <img src="./Assets/Turquie/cappadoce-twelve.webp" alt="Sculpture" class="gallery-thumb">
+            <img src="./Assets/Turquie/cappadoce-seventy.webp" alt="Sculpture" class="gallery-thumb">
+            <img src="./Assets/Turquie/cappadoce-five.webp" alt="Sculpture" class="gallery-thumb">
+            <img src="./Assets/Turquie/cappadoce-seven.webp" alt="Sculpture" class="gallery-thumb">
+            <img src="./Assets/Turquie/cappadoce-four.webp" alt="Sculpture" class="gallery-thumb">
+        </div>
+    </section>
+
+    <!-- Interlayer Cappadoce -->
+    <div class="interlayer">
+        <div class="card">
+            <img src="./Assets/Turquie/safranbolu-one.webp" alt="statue">
+        </div>
+        <div class="card">
+            <img src="./Assets/Turquie/safranbolu-three.webp" alt="bus">
+        </div>
+        <div class="card">
+            <img src="./Assets/Turquie/safranbolu-four.webp" alt="bus">
+        </div>
+    </div>
+
+    <!-- Carousel Istanbul -->
+    <section class="gallery-block">
+        <h2><a href="https://fr.wikipedia.org/wiki/Istanbul">Istanbul</a></h2>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Turquie/istanbul-one.webp" alt="Sainte Sophie" class="gallery-display gallery-main" id="istanbul-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs" id="istanbul-thumbs">
+            <img src="./Assets/Turquie/istanbul-one.webp" alt="Sainte Sophie" class="gallery-thumb active">
+            <img src="./Assets/Turquie/istanbul-four.webp" alt="Bosphore" class="gallery-thumb">
+            <img src="./Assets/Turquie/istanbul-five.webp" alt="Bosphore" class="gallery-thumb">
+            <img src="./Assets/Turquie/istanbul-six.webp" alt="Bosphore" class="gallery-thumb">
+            <img src="./Assets/Turquie/istanbul-seven.webp" alt="Istanbul" class="gallery-thumb">
+            <img src="./Assets/Turquie/istanbul-height.webp" alt="Istanbul" class="gallery-thumb">
+            <img src="./Assets/Turquie/istanbul-nine.webp" alt="Istanbul" class="gallery-thumb">
+        </div>
+    </section>
+
+    <!-- Interlayer Istanbul -->
+    <div class="interlayer">
+        <div class="card">
+            <img src="./Assets/Turquie/house1.webp" alt="house">
+        </div>
+        <div class="card">
+            <img src="./Assets/Turquie/house2.webp" alt="dames">
+        </div>
+        <div class="card">
+            <img src="./Assets/Turquie/house3.webp" alt="dames">
+        </div>
+    </div>
+
+    <!-- Carousel Habitat -->
+    <section class="gallery-block">
+        <h2>Habitat</h2>
+        <blockquote style="text-align: center;font-style: italic;font-weight: 900;">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </blockquote>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/Turquie/vrac1.webp" alt="Le temps s'est arreté" class="gallery-display gallery-main" id="habitat-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs" id="habitat-thumbs">
+            <img src="./Assets/Turquie/vrac1.webp" alt="Le temps s'est arreté" class="gallery-thumb active">
+            <img src="./Assets/Turquie/vrac2.webp" alt="Le temps s'est arreté" class="gallery-thumb">
+            <img src="./Assets/Turquie/vrac3.webp" alt="😂😂😂😂😂😂" class="gallery-thumb">
+            <img src="./Assets/Turquie/vrac4.webp" alt="Habitat en Cappadoce" class="gallery-thumb">
+            <img src="./Assets/Turquie/vrac5.webp" alt="Habitat en Cappadoce" class="gallery-thumb">
+            <img src="./Assets/Turquie/vrac6.webp" alt="Mon petit déjeuner d'anniversaire" class="gallery-thumb">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <h2>Travels &copy; May 2018</h2>
+    </footer>
+
+    <script src="./js/carousel.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

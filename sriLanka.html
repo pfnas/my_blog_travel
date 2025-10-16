@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="./index.html">Home</a></li>
+                <li class="menuDeroulant"><a href="#travel-menu">Some travels</a>
+                    <ul class="enumCountrys">
+                        <li><a href="./iceland.html">Iceland</a></li>
+                        <li><a href="./kirghistan.html">Kirghistan</a></li>
+                        <li><a href="./india.html">India</a></li>
+                        <li><a href="./turkey.html">Turkey</a></li>
+                        <li><a href="./sriLanka.html">Sri Lanka</a></li>
+                        <li><a href="./norway.html">Norway</a></li>
+                        <li><a href="#">Portugal</a></li>
+                        <li><a href="#">Italia</a></li>
+                        <li><a href="#">Espagna</a></li>
+                        <li><a href="#">Croatia</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <h1 class="logo"><a href="./index.html">Mes Pérégrinations</a></h1>
+        </div>
+    </nav>
+
+    <!-- Background Image -->
+    <div class="background_picture">
+        <img src="./Assets/SriLanka/lion's rock_resultat.webp" alt="lion's rock" class="illustration-country">
+    </div>
+
+    <!-- About Sri Lanka -->
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <h2>Sri Lanka (श्रीलंका)</h2>
+                <div class="flag lk">
+                    <div class="display_flag">
+                        <img src="./Assets/SriLanka/srilanka_flag_resultat.webp" alt="flag">
+                        <button class="btn" id="sriTravel">Travel to Sri Lanka</button>
+                    </div>
+                </div>
+              
+                <p>
+                    Anciennement connue sous le nom de Ceylan, 
+                    le Sri Lanka, perle de l’Océan Indien, est une île 
+                    fascinante au cœur de l’océan Indien. 
+                </p>
+                <p>Terre de thé, 
+                    de plages idylliques et de temples millénaires, elle offre une 
+                    palette de paysages époustouflants : montagnes verdoyantes, cascades, 
+                    rizières en terrasses et forêts tropicales.
+                </p>
+                <p>La population locale, chaleureuse et 
+                    accueillante, partage fièrement sa culture et ses traditions, 
+                    de la cuisine parfumée aux festivals colorés. Voyager au Sri Lanka, c’est découvrir un pays où l’histoire, la nature et l’aventure se mêlent harmonieusement.
+                </p>
+
+
+              
+            </div>
+            <div class="about-img">
+                <div class="card">
+                    <h3>---</h3>
+                    <img src="./Assets/SriLanka/Pecheur_resultat.webp" alt="travel" />
+                </div>
+                <div class="card">
+                    <h3>---</h3>
+                    <img src="./Assets/SriLanka/Boat.webp" alt="triporteur">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Info -->
+    <div class="login-popup">
+        <div class="form-popup" id="popupForm">
+            <h3>Informations on Sri Lanka</h3>
+            <p>Getting There: Departing from Barcelona, after a stopover in Amsterdam, the final destination is in Colombo la Sri Lankan capital.</p>
+            <p>Jet lag : + 3h30 in summer, + 4h30 in winter</p>
+            <p>NB :French passport valid for more than 6 months after the return date Mandatory visa (ETA form).</p>
+            <p>Monney: monney is "roupie SL" (LKR).</p>
+            <button type="button" class="btn cancel" id="cancelPopUp">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-full" id="lightboxFull" src="" alt="Full image">
+    </div>
+
+    <!-- Carousel Pêche -->
+    <section class="gallery-block">
+        <h2>La vie autour de la pêche</h2>
+        <p>Sur l'île de Srilanka, la vie côtière tourne autour de la pêche...</p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/SriLanka/boat-one.webp" alt="Launching boat" class="gallery-display gallery-main" id="peche-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs" id="peche-thumbs">
+            <img src="./Assets/SriLanka/boat-one.webp" alt="Launching boat" class="gallery-thumb active">
+            <img src="./Assets/SriLanka/boat-two.webp" alt="Fischermen" class="gallery-thumb">
+            <img src="./Assets/SriLanka/fish-market-one.webp" alt="Fish Market" class="gallery-thumb">
+            <img src="./Assets/SriLanka/boat-four.webp" alt="Fischermen" class="gallery-thumb">
+            <img src="./Assets/SriLanka/boat-five.webp" alt="Fishing boat" class="gallery-thumb">
+            <img src="./Assets/SriLanka/boat-six.webp" alt="Dry docking" class="gallery-thumb">
+            <img src="./Assets/SriLanka/fish-market-two.webp" alt="Fish Market" class="gallery-thumb">
+        </div>
+    </section>
+
+    <!-- Carousel Thé -->
+    <section class="gallery-block">
+        <h2>Le thé de Ceylan</h2>
+        <p>Les premières plantations de thé ont été introduites...</p>
+        <div class="gallery-carousel">
+            <button class="gallery-btn gallery-prev">&#10094;</button>
+            <img src="./Assets/SriLanka/plantation_tea_one.webp" alt="Plantation de thé" class="gallery-display gallery-main" id="tea-main">
+            <button class="gallery-btn gallery-next">&#10095;</button>
+        </div>
+        <div class="gallery-thumbs" id="tea-thumbs">
+            <img src="./Assets/SriLanka/plantation_tea_one.webp" alt="Plantation 1" class="gallery-thumb active">
+            <img src="./Assets/SriLanka/plantation_tea_two.webp" alt="Plantation 2" class="gallery-thumb">
+            <img src="./Assets/SriLanka/plantation_tea_three.webp" alt="Plantation 3" class="gallery-thumb">
+            <img src="./Assets/SriLanka/plantation_tea_four.webp" alt="Plantation 4" class="gallery-thumb">
+            <img src="./Assets/SriLanka/plantation_tea_five.webp" alt="Plantation 5" class="gallery-thumb">
+            <img src="./Assets/SriLanka/plantation_tea_six.webp" alt="Plantation 6" class="gallery-thumb">
+            <img src="./Assets/SriLanka/plantation_tea_seven.webp" alt="Plantation 7" class="gallery-thumb">
+        </div>
+    </section>
+
+    <!-- Interlayer Images -->
+    <div class="interlayer">
+        <div class="card">
+            <img src="./Assets/SriLanka/adams_peak_card.webp" alt="View of issykul">
+        </div>
+        <div class="card">
+            <img src="./Assets/SriLanka/adams_peak_one.webp" alt="horses">
+        </div>
+        <div class="card">
+            <img src="./Assets/SriLanka/adams_peak_two.webp" alt="tank">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <h2>Travels &copy; 2025</h2>
+    </footer>
+
+    <script src="./js/carousel.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
