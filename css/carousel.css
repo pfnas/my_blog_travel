@@ -121,11 +121,11 @@
   cursor:pointer;
 }
 /* Masquer les flèches en desktop */
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
   .gallery-btn {
     display: none;
   }
-}
+} */
 
 /* Les flèches restent visibles en mobile/tablette */
 @media (max-width: 768px) {

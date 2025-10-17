@@ -255,6 +255,95 @@ blockquote:after {
     cursor: pointer;
     color: #333;
 }
+/* Section Pompeï style + bouton visible quand la section est "in-view" */
+#section-pompei {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(12,12,12,0.95), rgba(28,28,28,0.9));
+  color: #f4f4f4;
+}
+
+/* Vague douce (optionnelle) */
+#section-pompei::before {
+  content: "";
+  position: absolute;
+  bottom: -18%;
+  left: -30%;
+  width: 160%;
+  height: 180%;
+  background: radial-gradient(circle at 50% 60%, rgba(255,255,255,0.03), transparent 45%);
+  transform-origin: center;
+  animation: gentleWave 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes gentleWave {
+  0%,100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(6%) rotate(2deg); }
+}
+
+/* Place le contenu au-dessus de l'effet */
+#section-pompei > * { position: relative; z-index: 1; }
+
+/* Bouton son : caché par défaut, visible quand .in-view est ajouté */
+.section-sound-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  display: none;                /* -> shown when section has class .in-view */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+}
+#section-pompei.in-view .section-sound-btn {
+  display: flex;
+  opacity: 0.95;
+}
+.section-sound-btn.playing {
+  background: var(--primary, #0a84ff);
+  box-shadow: 0 12px 30px rgba(10,132,255,0.18);
+  transform: scale(1.05);
+}
+
+/* Bouton "Activer le son" (apparait seulement si autoplay bloqué) */
+.section-sound-enable {
+  position: absolute;
+  top: 18px;
+  right: 74px;
+  z-index: 11;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.section-sound-enable.hidden { display: none; }
+
+/* petite animation icône */
+.section-sound-btn.playing i { animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.18); opacity: 0.8; }
+}
+
+/* responsive tweaks */
+@media (max-width: 700px) {
+  .section-sound-btn { width: 42px; height: 42px; right: 12px; top: 12px; }
+  .section-sound-enable { right: 64px; top: 12px; }
+}
+
 
 
 
