@@ -7,6 +7,18 @@
   --secondary: #FFD166;
   --shadow: rgba(0, 0, 0, 0.1);
 }
+/* === Correction : liens visibles en mode sombre === */
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #ffffff !important; /* texte bien blanc en dark mode */
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #e2e2e2 !important; /* léger effet visuel au survol */
+  }
+}
+
 
 body.dark-mode {
   --bg: #1E1E1E;
@@ -96,7 +108,7 @@ h2 {
 
 a {
     text-decoration: none;
-    color: #000
+    color: #929191
 }
 
 
