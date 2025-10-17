@@ -165,3 +165,35 @@ https://www.youtube.com/watch?v=hfPlTJJnDac&ab_channel=FormationsExcel%2CAccesse
 | `#carousel-[pays]`    | `id`      | Identifiant spécifique à chaque carrousel          |
 | `#travelBtn`          | `id`      | Bouton “Travel to [Pays]” spécifique               |
 
+
+
+
+
+
+
+ <img src="./Assets/Italie/rome/rome13.webp" alt="Rome" class="gallery-thumb active">
+    <img src="./Assets/Italie/rome/rome22.webp" alt="rome" class="gallery-thumb active">
+    <img src="./Assets/Italie/rome/rome24.webp" alt="rome"  class="gallery-thumb"> 
+     <img src="./Assets/Italie/rome/rome18.webp" alt="rome"  class="gallery-thumb">    
+    <img src="./Assets/Italie/rome/rome4.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome5.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome6.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome7.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome8.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome9.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome10.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome11.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome12.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome2.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome14.webp" alt="rome"  class="gallery-thumb">
+     <img src="./Assets/Italie/rome/rome1.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome15.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome16.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome20.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome21.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome15.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome22.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome23.webp" alt="rome"  class="gallery-thumb">
+    <img src="./Assets/Italie/rome/rome24.webp" alt="rome"  class="gallery-thumb">
+     <img src="./Assets/Italie/rome/rome17.webp" alt="rome"  class="gallery-thumb"> 
+
