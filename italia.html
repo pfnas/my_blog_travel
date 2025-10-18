@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="./css/page.css">
   <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/sound.css">
   <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 
@@ -226,21 +227,13 @@
   </section>
 
 <!-- Section Pompeï -->
-<section class="gallery-block" id="section-pompei" data-sound="./Assets/sounds/pompei_pinkfloyd.mp3" aria-label="Section Pompeï">
-  <!-- Bouton visible tant que la section est visible -->
-  <button class="section-sound-btn" id="pompei-sound-btn" aria-pressed="false" aria-label="Activer / couper la musique">
-    <i class="fas fa-volume-up" aria-hidden="true"></i>
-  </button>
- 
+
   <h2>Pompeï !!</h2>
 
   <p class="sound-paragraph" data-sound="./Assets/sound/pompei_pinkfloyd.mp3">
     Pompéi… une cité figée dans le souffle brûlant du temps.
     Sous le regard majestueux du Vésuve, chaque pierre, 
     chaque ruelle, chaque fresque, chaque ombre garde en mémoire l’éruption de ce géant.
-    <!-- <button class="sound-toggle" aria-label="Contrôle du son">
-      <i class="fas fa-volume-up"></i>
-    </button> -->
   </p>
 
   <p class="sound-paragraph" data-sound="./Assets/sounds/pompei_pinkfloyd.mp3">
@@ -248,23 +241,109 @@
     venue réveiller les fantômes.
     Là où le feu avait tout pris, le son a redonné vie.
     Pompéi n’est plus seulement une ruine : c’est un poème de pierre, de feu et de musique éternelle.
-    <!-- <button class="sound-toggle" aria-label="Contrôle du son">
-      <i class="fas fa-volume-up"></i>
-    </button> -->
   </p>
 
-  <div class="interlayer">
-    <div class="card">
-      <img src="./Assets/Italie/pompei/david_gilmour_resultat.webp" alt="Pink Floyd" loading="lazy">
-      <img src="./Assets/Italie/pompei/david_gilmoure1_resultat.webp" alt="Pink Floyd" loading="lazy">
-      <img src="./Assets/Italie/pompei/david_gilmoure2_resultat.webp" alt="Pink Floyd" loading="lazy">
-      <img src="./Assets/Italie/pompei/david_gilmoure3_resultat.webp" alt="Pink Floyd" loading="lazy">
-      <img src="./Assets/Italie/pompei/david_gilmoure8.webp" alt="Pink Floyd" loading="lazy">
-      <img src="./Assets/Italie/pompei/david_gilmoure4_resultat.webp" alt="Pink Floyd" loading="lazy">
-      <img src="./Assets/Italie/pompei/david_gilmoure5_resultat.webp" alt="Pink Floyd" loading="lazy">
-      <img src="./Assets/Italie/pompei/david_gilmoure6_resultat.webp" alt="Pink Floyd" loading="lazy">
-    </div>
+ <!-- Section Pink Floyd avec audio -->
+<div class="interlayer pink_floyd">
+  <div class="card">
+    <img src="./Assets/Italie/pompei/david_gilmour_resultat.webp" alt="Pink Floyd" loading="lazy">
+    <img src="./Assets/Italie/pompei/david_gilmoure1_resultat.webp" alt="Pink Floyd" loading="lazy">
+    <img src="./Assets/Italie/pompei/david_gilmoure2_resultat.webp" alt="Pink Floyd" loading="lazy">
+    <img src="./Assets/Italie/pompei/david_gilmoure3_resultat.webp" alt="Pink Floyd" loading="lazy">
+    <img src="./Assets/Italie/pompei/david_gilmoure8.webp" alt="Pink Floyd" loading="lazy">
+    <img src="./Assets/Italie/pompei/david_gilmoure4_resultat.webp" alt="Pink Floyd" loading="lazy">
+    <img src="./Assets/Italie/pompei/david_gilmoure5_resultat.webp" alt="Pink Floyd" loading="lazy">
+    <img src="./Assets/Italie/pompei/david_gilmoure6_resultat.webp" alt="Pink Floyd" loading="lazy">
   </div>
+
+  <!-- Lecteur audio flottant -->
+  <div class="audio-player">
+    <audio id="pinkFloydAudio" loop>
+      <source src="./Assets/sounds/pompei_pinkfloyd.mp3" type="audio/mpeg">
+      Votre navigateur ne supporte pas l’audio.
+    </audio>
+    <button id="playPauseBtn">▶️</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+  </div>
+</div>
+
+<style>
+.audio-player {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.audio-player.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.audio-player button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.audio-player input[type=range] {
+  width: 100px;
+}
+</style>
+
+<script>
+// Sélection des éléments
+const pinkFloydSection = document.querySelector(".interlayer.pink_floyd");
+const audio = document.getElementById("pinkFloydAudio");
+const playBtn = document.getElementById("playPauseBtn");
+const volumeControl = document.getElementById("volumeControl");
+const audioPlayer = document.querySelector(".audio-player");
+
+// Play/pause manuel
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = "⏸️";
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶️";
+  }
+});
+
+// Volume
+volumeControl.addEventListener("input", () => {
+  audio.volume = volumeControl.value;
+});
+
+// Intersection Observer pour détecter la visibilité de la section
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      audioPlayer.classList.add("show");
+      audio.play();
+      playBtn.textContent = "⏸️";
+    } else {
+      audioPlayer.classList.remove("show");
+      audio.pause();
+      playBtn.textContent = "▶️";
+    }
+  });
+}, { threshold: 0.5 }); // 50% visible
+
+observer.observe(pinkFloydSection);
+</script>
+
+
   
   <h2>"Pompeï, figée dans le souffle du temps"</h2>
   <h3>Le Vésuve, gardien de la baie de Naples</h3>
@@ -277,18 +356,15 @@
     Naples et les vestiges de Pompéi, figés dans le temps.  
     Le volcan veille : témoin immobile
     d’une histoire gravée dans la cendre et la lumière.
-    <!-- <button class="sound-toggle" aria-label="Contrôle du son">
-      <i class="fas fa-volume-up"></i>
-    </button> -->
   </p>
 
-  <div class="gallery-carousel" data-carousel-id="nomad-culture">
+  <div class="gallery-carousel" data-gallery="vesuve">
     <button class="gallery-btn gallery-prev">&#10094;</button>
     <img src="./Assets/Italie/pompei/vesuve7.webp" alt="Pompeï" class="gallery-display gallery-main">
     <button class="gallery-btn gallery-next">&#10095;</button>
   </div>
 
-  <div class="gallery-thumbs">
+  <div class="gallery-thumbs" data-gallery="vesuve">
     <img src="./Assets/Italie/pompei/vesuve7.webp" alt="Pompeï" class="gallery-thumb active">
     <img src="./Assets/Italie/pompei/pompei1.webp" alt="Pompeï" class="gallery-thumb">
     <img src="./Assets/Italie/pompei/vesuve1.webp" alt="Pompeï" class="gallery-thumb">
@@ -315,18 +391,15 @@
     Les rues, les fresques et les ruines racontent la vie de gens surpris par le feu,
     et pourtant préservé pour l’éternité.
     Marcher ici, c’est remonter le temps.
-    <!-- <button class="sound-toggle" aria-label="Contrôle du son">
-      <i class="fas fa-volume-up"></i>
-    </button> -->
   </p>
 
-  <div class="gallery-carousel" data-carousel-id="nomad-culture">
+  <div class="gallery-carousel" data-gallery="pompei">
     <button class="gallery-btn gallery-prev">&#10094;</button>
     <img src="./Assets/Italie/pompei/pompei4.webp" alt="Pompeï" class="gallery-display gallery-main">
     <button class="gallery-btn gallery-next">&#10095;</button>
   </div>
 
-  <div class="gallery-thumbs">
+  <div class="gallery-thumbs" data-gallery="pompei">
     <img src="./Assets/Italie/pompei/pompei4.webp" alt="Pompeï" class="gallery-thumb active">
     <img src="./Assets/Italie/pompei/pompei1.webp" alt="Pompeï" class="gallery-thumb">
     <img src="./Assets/Italie/pompei/pompei2.webp" alt="Pompeï" class="gallery-thumb">
@@ -353,10 +426,10 @@
     <img src="./Assets/Italie/pompei/pompei23.webp" alt="Pompeï" class="gallery-thumb">
     <img src="./Assets/Italie/pompei/pompei22.webp" alt="Pompeï" class="gallery-thumb">
   </div>
-</section>
-<section>
+
+
     
-    <!-- Carousel Midnight Sun -->
+    <!-- Carousel Toscane-->
     <section class="gallery-block">
       <h2>La Toscane</h2>
         <h3>Des paysages en or</h3>

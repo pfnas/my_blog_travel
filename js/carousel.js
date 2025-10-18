@@ -1,122 +1,105 @@
+// carousel.js — Utiliser à la place de l'ancien (copier-coller)
 document.addEventListener("DOMContentLoaded", () => {
-  const carousels = document.querySelectorAll(".gallery-block");
+  if (window.__nomadCarouselInit) return;
+  window.__nomadCarouselInit = true;
 
-  carousels.forEach(block => {
-    const mainImg = block.querySelector(".gallery-main");
-    const thumbs = block.querySelectorAll(".gallery-thumb");
-    const prevBtn = block.querySelector(".gallery-prev");
-    const nextBtn = block.querySelector(".gallery-next");
+  // On initialise chaque carousel qui a data-gallery (ou tous si pas présent)
+  document.querySelectorAll(".gallery-carousel").forEach((carousel, ci) => {
+    // repère l'image principale
+    const main = carousel.querySelector(".gallery-main") || carousel.querySelector(".gallery-display");
+    if (!main) return;
 
-    let currentIndex = 0;
+    // identifiant logique (préférer data-gallery)
+    const gid = (carousel.dataset.gallery || `__auto_${ci}`).trim();
 
-    // Fonction pour afficher une image
-    function showImage(index) {
-      // Boucle infinie manuelle
-      if (index < 0) {
-        index = thumbs.length - 1; // revient à la dernière
-      } else if (index >= thumbs.length) {
-        index = 0; // revient à la première
+    // cherche le container de miniatures associé (par data-gallery)
+    let thumbsContainer = document.querySelector(`.gallery-thumbs[data-gallery="${gid}"]`);
+
+    // fallback : si pas trouvé, on prend la .gallery-thumbs la plus proche dans le même .gallery-block
+    if (!thumbsContainer) {
+      const host = carousel.closest(".gallery-block") || carousel.parentElement;
+      thumbsContainer = host ? host.querySelector(".gallery-thumbs") : null;
+    }
+    const thumbs = thumbsContainer ? Array.from(thumbsContainer.querySelectorAll(".gallery-thumb")) : [];
+
+    // boutons prev/next du carousel (localisés dans ce carousel)
+    const prevBtn = carousel.querySelector(".gallery-prev") || carousel.querySelector(".gallery-btn.gallery-prev");
+    const nextBtn = carousel.querySelector(".gallery-next") || carousel.querySelector(".gallery-btn.gallery-next");
+
+    // état local
+    let index = 0;
+
+    // si une miniature a déjà .active on l'utilise
+    if (thumbs.length) {
+      const activeIdx = thumbs.findIndex(t => t.classList.contains("active"));
+      index = activeIdx >= 0 ? activeIdx : 0;
+      // initialise l'image principale depuis la miniature active
+      if (thumbs[index] && thumbs[index].src) {
+        main.src = thumbs[index].src;
+        if (thumbs[index].alt) main.alt = thumbs[index].alt;
       }
-      currentIndex = index;
-
-      // Transition fluide
-      mainImg.style.opacity = 0;
-      setTimeout(() => {
-        mainImg.src = thumbs[currentIndex].src;
-        mainImg.alt = thumbs[currentIndex].alt;
-        mainImg.style.opacity = 1;
-      }, 200);
-
-      // Met à jour les miniatures
-      thumbs.forEach(t => t.classList.remove("active"));
-      thumbs[currentIndex].classList.add("active");
     }
 
-    // Navigation par clic
-    thumbs.forEach((thumb, idx) => {
-      thumb.addEventListener("click", () => showImage(idx));
-    });
+    // helper : met à jour seulement CE carousel
+    const update = (i) => {
+      if (!thumbs.length) return;
+      if (i < 0) i = thumbs.length - 1;
+      if (i >= thumbs.length) i = 0;
+      index = i;
 
-    if (prevBtn) prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
-    if (nextBtn) nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
-
-    // Initialisation
-    showImage(0);
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Sélectionne tous les carousels de la page
-    const carousels = document.querySelectorAll(".gallery-block");
-
-    carousels.forEach(carousel => {
-        const mainImg = carousel.querySelector(".gallery-main");
-        const thumbs = carousel.querySelectorAll(".gallery-thumb");
-        const prevBtn = carousel.querySelector(".gallery-prev");
-        const nextBtn = carousel.querySelector(".gallery-next");
-
-        let currentIndex = 0;
-
-        // Fonction pour changer l'image principale
-        function showImage(index) {
-            if (index < 0) index = thumbs.length - 1;
-            if (index >= thumbs.length) index = 0;
-            currentIndex = index;
-
-            // Ajoute la transition douce
-            mainImg.style.opacity = 0;
-            setTimeout(() => {
-                mainImg.src = thumbs[currentIndex].src;
-                mainImg.alt = thumbs[currentIndex].alt;
-                mainImg.style.opacity = 1;
-            }, 200);
-
-            // Active la miniature
-            thumbs.forEach(thumb => thumb.classList.remove("active"));
-            thumbs[currentIndex].classList.add("active");
+      const t = thumbs[index];
+      if (t && t.src) {
+        // transition douce (si tu veux, sinon retire)
+        try {
+          main.style.transition = "opacity 180ms ease";
+          main.style.opacity = 0;
+          setTimeout(() => {
+            main.src = t.src;
+            if (t.alt) main.alt = t.alt;
+            main.style.opacity = 1;
+          }, 160);
+        } catch (e) {
+          main.src = t.src;
+          if (t.alt) main.alt = t.alt;
         }
+      }
 
-        // Cliquer sur les miniatures
-        thumbs.forEach((thumb, idx) => {
-            thumb.addEventListener("click", () => showImage(idx));
-        });
+      // n'affecte que les miniatures de cette gallery
+      thumbs.forEach(x => x.classList.remove("active"));
+      if (thumbs[index]) thumbs[index].classList.add("active");
+    };
 
-        // Boutons précédent / suivant
-        if (prevBtn) prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
-        if (nextBtn) nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+    // empêcher double-initialisation (sécurité)
+    if (carousel.dataset._inited === "true") return;
+    carousel.dataset._inited = "true";
+
+    // clic sur miniatures -> change uniquement l'image de la même data-gallery
+    thumbs.forEach((thumb, i) => {
+      // retirer d'éventuels anciens handlers (safer)
+      thumb.replaceWith(thumb.cloneNode(true));
+      // récupérer de nouveau la node pour attacher proprement
     });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const carousels = document.querySelectorAll(".gallery-block");
+    // re-obtenir thumbs après clone (si clonés)
+    const freshThumbs = thumbsContainer ? Array.from(thumbsContainer.querySelectorAll(".gallery-thumb")) : [];
 
-  carousels.forEach(block => {
-    const mainImg = block.querySelector(".gallery-main");
-    const thumbs = block.querySelectorAll(".gallery-thumb");
-    const prevBtn = block.querySelector(".gallery-prev");
-    const nextBtn = block.querySelector(".gallery-next");
+    freshThumbs.forEach((thumb, i) => {
+      thumb.addEventListener("click", (e) => {
+        e.preventDefault?.();
+        update(i);
+      });
+    });
 
-    let currentIndex = 0;
+    // flèches locales
+    prevBtn?.addEventListener("click", (e) => {
+      e?.preventDefault?.();
+      update(index - 1);
+    });
+    nextBtn?.addEventListener("click", (e) => {
+      e?.preventDefault?.();
+      update(index + 1);
+    });
 
-    function showImage(index) {
-      if (index < 0) index = thumbs.length - 1;
-      if (index >= thumbs.length) index = 0;
-      currentIndex = index;
-
-      mainImg.style.opacity = 0;
-      setTimeout(() => {
-        mainImg.src = thumbs[currentIndex].src;
-        mainImg.alt = thumbs[currentIndex].alt;
-        mainImg.style.opacity = 1;
-      }, 150);
-
-      thumbs.forEach(t => t.classList.remove("active"));
-      thumbs[currentIndex].classList.add("active");
-    }
-
-    thumbs.forEach((thumb, idx) => thumb.addEventListener("click", () => showImage(idx)));
-
-    if (prevBtn) prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
-    if (nextBtn) nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+    // init
+    update(index);
   });
 });
