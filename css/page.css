@@ -943,28 +943,7 @@ input[type=radio] {
 
 /*on cache tous les input*/
 
-.slider-input label,
-.slider-input2 label,
-.slider-input3 label,
-.slider-input4 label,
-.slider-input5 label,
-.slider-input6 label {
 
-    cursor: pointer
-}
-
-.slider-input,
-.slider-input2,
-.slider-input3,
-.slider-input4,
-.slider-input5,
-.slider-input6 {
-
-    overflow: hidden;
-    position: relative;
-    max-width: 769px;
-    margin: 2rem auto
-}
 
 
 .photos-mini,
@@ -993,28 +972,6 @@ input[type=radio] {
 
 }
 
-/*grande photo*/
-.fenetre,
-.fenetre2,
-.fenetre3,
-.fenetre4,
-.fenetre5,
-.fenetre6 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform .6s, opacity .6s;
-    transform: translatex(-100%);
-    opacity: 0;
-    -webkit-transform: translatex(-100%);
-    -moz-transform: translatex(-100%);
-    -ms-transform: translatex(-100%);
-    -o-transform: translatex(-100%);
-    -webkit-transition: transform .6s, opacity .6s;
-    -moz-transition: transform .6s, opacity .6s;
-    -ms-transition: transform .6s, opacity .6s;
-    -o-transition: transform .6s, opacity .6s;
-}
 
 .fen:checked~.fenetre,
 .fen2:checked~.fenetre2,
