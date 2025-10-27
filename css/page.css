@@ -1809,4 +1809,83 @@ p {
   background: linear-gradient(135deg, #a60d25, #00287a);
   box-shadow: 0 6px 18px rgba(0, 51, 160, 0.4);
 }
+.venise {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #e6f3ff 0%, #b3d9ff 100%);
+  color: #00334e;
+  text-align: center;
+  overflow: hidden;
+  animation: veniseFadeIn 2s ease-out;
+}
+
+.venise h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation: floatText 5s ease-in-out infinite alternate;
+}
+
+.venise p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: veniseAppear 2.5s ease-out;
+}
+
+@keyframes veniseFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatText {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes veniseAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 🌊 Animation douce d’onde lumineuse */
+.venise::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25), transparent 70%);
+  animation: lightWave 8s ease-in-out infinite;
+}
+
+@keyframes lightWave {
+  0% {
+    transform: translateX(-30%);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
 
