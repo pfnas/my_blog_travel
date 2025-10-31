@@ -36,8 +36,8 @@ body {
 }
 blockquote {
   position: relative;
-  margin: 2rem auto;
-  max-width: min(75ch, 90%);
+  margin: 2rem auto; /* centre horizontalement */
+  max-width: 75ch;
   padding: 1.5rem 2rem;
   text-align: center;
   background: rgba(0, 0, 0, 0.05);
@@ -47,21 +47,12 @@ blockquote {
   line-height: 1.6;
   color: #222;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-blockquote {
-  text-align: center;
-  font-style: oblique;
-  font-weight: 600;
-  font-size: 1.2em;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
   border-left: 4px solid #333;
-  display: inline-block;
   quotes: "«" "»";
+  display: block; /* ✅ important pour le centrage */
 }
 
-blockquote:before {
+blockquote::before {
   content: open-quote;
   font-size: 2em;
   vertical-align: -0.4em;
@@ -69,7 +60,7 @@ blockquote:before {
   color: #555;
 }
 
-blockquote:after {
+blockquote::after {
   content: close-quote;
   font-size: 2em;
   vertical-align: -0.4em;
