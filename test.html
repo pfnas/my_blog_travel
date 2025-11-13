@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cappadoce — Speech animé</title>
+  <style>
+    :root{
+      --bg-1:#0b1020;
+      --bg-2:#2b1f3a;
+      --accent:#ffd27f;
+      --muted:rgba(255,255,255,0.75);
+      --glass: rgba(255,255,255,0.05);
+      --glass-2: rgba(0,0,0,0.25);
+      --max-width:900px;
+    }
+
+    /* Page layout */
+    html,body{height:100%;margin:0;font-family:Inter, "Helvetica Neue", Arial, sans-serif;background:linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 60%); color: #fff; -webkit-font-smoothing:antialiased;}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 20px;box-sizing:border-box;}
+
+    /* Card */
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:16px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    /* Starfield using repeating-radial-gradients */
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.85) 0, transparent 60%),
+        radial-gradient(1px 1px at 40% 30%, rgba(255,255,255,0.65) 0, transparent 60%),
+        radial-gradient(1px 1px at 70% 10%, rgba(255,255,255,0.6) 0, transparent 60%),
+        radial-gradient(1px 1px at 80% 70%, rgba(255,255,255,0.5) 0, transparent 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.05), transparent 40%);
+      opacity:0.25;
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+
+    header{
+      display:flex;align-items:center;gap:12px;margin-bottom:18px;
+    }
+    .badge{
+      background: linear-gradient(90deg,#ffb86b,#ffd27f);
+      color:#2a1a00;
+      padding:6px 10px;border-radius:999px;font-weight:700;font-size:14px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);
+    }
+    h1{margin:0;font-size:20px;letter-spacing:0.2px;}
+    p.lead{margin:0;color:var(--muted);font-size:14px;}
+
+    /* Speech container */
+    .speech{
+      margin-top:18px;
+      font-size:18px;
+      line-height:1.6;
+      color:#fff;
+    }
+    .speech .line{
+      opacity:0; transform: translateY(14px) scale(0.995);
+      will-change: transform, opacity;
+      margin-bottom:0.9rem;
+    }
+
+    /* animation: reveal lines one by one */
+    @keyframes revealLine {
+      from { opacity:0; transform: translateY(14px) scale(0.995); }
+      to   { opacity:1; transform: translateY(0) scale(1); }
+    }
+
+    /* balloons (simple SVG-like shapes using CSS) */
+    .balloon {
+      position:absolute;
+      width:120px;height:80px;
+      left:10%;
+      top: -10%;
+      transform-origin:center;
+      opacity:0.95;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+    }
+    .balloon svg{width:100%;height:100%;display:block;}
+    .balloon.b2{left:70%; width:160px; height:110px; top:-6%;}
+    .balloon.b3{left:45%; width:100px; height:70px; top:-12%;}
+    .float {
+      animation: floatY 9s ease-in-out infinite, sway 6s ease-in-out infinite;
+    }
+    .float.b2{animation-duration:10s,7s;}
+    .float.b3{animation-duration:8.6s,5.7s;}
+
+    @keyframes floatY{
+      0%{ transform: translateY(0) }
+      50%{ transform: translateY(22px) }
+      100%{ transform: translateY(0) }
+    }
+    @keyframes sway{
+      0%{ transform: translateX(0) rotate(0deg) }
+      50%{ transform: translateX(-8px) rotate(-2deg) }
+      100%{ transform: translateX(0) rotate(0deg) }
+    }
+
+    /* little footer note and CTA */
+    .meta{margin-top:18px;color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .cta{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;color:var(--muted);font-size:13px;}
+
+    /* responsive and reduced motion */
+    @media (max-width:640px){
+      .card{padding:18px;border-radius:12px;}
+      .speech{font-size:16px;}
+      .balloon{display:none;} /* hide balloons on tiny screens to avoid clutter */
+    }
+    @media (prefers-reduced-motion: reduce){
+      .float, .line{animation:none !important; transition:none !important;}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <article class="card" aria-labelledby="cap-title">
+      <header>
+        <div class="badge">Cappadoce</div>
+        <div>
+          <h1 id="cap-title">La Cappadoce — cheminées, montgolfières & clins d’œil spatiaux</h1>
+          <p class="lead">Un petit texte narratif, poétique et un rien humoristique — prêt pour l'écran.</p>
+        </div>
+      </header>
+
+      <!-- floating balloons (decorative) -->
+      <div class="balloon float" aria-hidden="true">
+        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ffb86b"/><stop offset="1" stop-color="#ffd27f"/></linearGradient></defs>
+          <ellipse cx="60" cy="36" rx="44" ry="30" fill="url(#g1)"/>
+          <path d="M60 66 L60 80" stroke="#ffd27f" stroke-width="1.6" stroke-linecap="round"/>
+          <rect x="56" y="80" width="8" height="8" rx="2" fill="#ffd27f"/>
+        </svg>
+      </div>
+
+      <div class="balloon float b2" aria-hidden="true">
+        <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#c7adff"/><stop offset="1" stop-color="#ffd27f"/></linearGradient></defs>
+          <ellipse cx="80" cy="50" rx="60" ry="38" fill="url(#g2)"/>
+          <path d="M80 88 L80 106" stroke="#ffd27f" stroke-width="1.8" stroke-linecap="round"/>
+          <rect x="74" y="106" width="12" height="9" rx="2" fill="#ffd27f"/>
+        </svg>
+      </div>
+
+      <div class="balloon float b3" aria-hidden="true">
+        <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <ellipse cx="50" cy="32" rx="36" ry="24" fill="#89f7ff"/>
+          <path d="M50 56 L50 70" stroke="#89f7ff" stroke-width="1.4" stroke-linecap="round"/>
+          <rect x="46" y="70" width="8" height="6" rx="1.6" fill="#89f7ff"/>
+        </svg>
+      </div>
+
+      <!-- Speech text: each .line will be revealed in sequence -->
+      <section class="speech" id="cappadocia-speech" aria-labelledby="cap-title">
+        <p class="line">La Cappadoce, c’est un décor qui aurait pu servir de storyboard à un film de science-fiction bien avant que le cinéma ne s’en empare.</p>
+        <p class="line">Ses cheminées de fées, dressées comme des sentinelles de pierre, paraissent attendre le passage d’un vaisseau spatial plutôt que celui d'un troupeau.</p>
+        <p class="line">On pense parfois à Tatooine — sauf qu’ici, les habitants ont creusé des maisons dans la roche, pas des dômes dans le sable.</p>
+        <p class="line">Quand l'aube arrive, une armée de montgolfières colorées s’élève, comme une flotte pacifique venue capturer la lumière du matin.</p>
+        <p class="line">En bas, les vallées se déploient en dentelle de pierre, silencieuses, baignées d’or et de poussière ancienne.</p>
+        <p class="line">La Cappadoce n’est pas une autre planète — c’est un autre monde, où l’histoire se raconte dans la pierre et les rêves.</p>
+        <p class="line"><em>Et si, un soir, tu crois apercevoir Yoda derrière une cheminée, ne t’inquiète pas — c’est probablement juste le vent.</em></p>
+      </section>
+
+      <div class="meta" aria-hidden="true">
+        <span>Montgolfières • Cheminées de fées • Paysages troglodytes</span>
+        <span class="cta">Un clin d’œil à Star Wars — en douceur ✨</span>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    // Reveal lines one-by-one with a smooth stagger.
+    (function(){
+      const lines = Array.from(document.querySelectorAll('.speech .line'));
+      const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(prefersReduced){
+        lines.forEach(l => { l.style.opacity = 1; l.style.transform = 'none'; });
+        return;
+      }
+
+      // Stagger timing
+      const baseDelay = 400; // ms before first line
+      const step = 420;      // ms between lines
+      lines.forEach((el, idx) => {
+        const delay = baseDelay + idx * step;
+        el.style.animation = `revealLine 650ms cubic-bezier(.2,.9,.2,1) ${delay}ms both`;
+      });
+
+      // small accessible feature: allow replay on click anywhere in card
+      const card = document.querySelector('.card');
+      card.addEventListener('click', (e) => {
+        // if user clicks a text area, replay animation
+        if (e.target.closest('.speech')) {
+          lines.forEach((el, idx) => {
+            el.style.animation = 'none'; // reset
+            // force reflow to restart animation
+            void el.offsetWidth;
+            const delay = baseDelay + idx * step;
+            el.style.animation = `revealLine 650ms cubic-bezier(.2,.9,.2,1) ${delay}ms both`;
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
