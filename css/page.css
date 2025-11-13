@@ -312,7 +312,7 @@ nav .navbar-container ul li:hover .enumCountrys {
 
 .menu-items a {
     text-decoration: none;
-    color: #444;
+    color: #12cdd7;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
@@ -675,7 +675,7 @@ nav .navbar-container ul li:hover .enumCountrys {
 
     .navbar .menu-items {
         padding-top: 100px;
-       background: var(--card-bg, #fff);
+       background: var(--card-bg, #2c2b2b);
         height: 100vh;
         max-width: 300px;
         transform: translate(-150%);
